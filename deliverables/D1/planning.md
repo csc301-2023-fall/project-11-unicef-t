@@ -122,17 +122,17 @@ Team Building Activity:
 Share a picture: 
 
 Fun Facts:
-Parth: I used to be a DJ in high school.
+* Parth: I used to be a DJ in high school.
 
-Justin: I never had Mc Chicken at McDonalds.
+* Justin: I never had Mc Chicken at McDonalds.
 
-David: I am building games with Unity. 
+* David: I am building games with Unity. 
 
-Vala: I actually enjoy using Assembly. 
+* Vala: I actually enjoy using Assembly. 
 
-Luke: I think greentea with yakult is the best drink in the world. (But you can’t find the best one in canada)
+* Luke: I think greentea with yakult is the best drink in the world. (But you can’t find the best one in canada)
 
-Sunny: I can speak a dialect of Canadian french called Chiac (Used in Atlantic Canada) 
+* Sunny: I can speak a dialect of Canadian french called Chiac (Used in Atlantic Canada) 
 
 Do a team-building activity in-person or online. This can be playing an online game, meeting for bubble tea, lunch, or any other activity you all enjoy.
 * Get to know each other on a more personal level.
@@ -142,19 +142,19 @@ Do a team-building activity in-person or online. This can be playing an online g
 
 #### Q7: What are the roles & responsibilities on the team?
 
-Parth: 
+* Parth: 
 
-Justin:
+* Justin:
 
-David:
+* David:
 
-Vala: 
+* Vala: 
 
-Luke: 
+* Luke: 
 
-Will: Partner Liaison, Leader of the team,  
+* Will: Partner Liaison, Leader of the team,  
 
-Sunny: 
+* Sunny: 
 
 Describe the different roles on the team and the responsibilities associated with each role. 
  * Roles should reflect the structure of your team and be appropriate for your project. One person may have multiple roles.  
@@ -168,6 +168,11 @@ List each team member and:
 
 
 #### Q8: How will you work as a team?
+We meet every Thursday online at 8pm during tutorial and every Friday in-person in Bahen at 2pm. The purposes of each meeting include project discussions, assigning tasks, coding sessions, code reviews and writing reports.
+
+We intend to have regular meetings with our partner once a week. However our partner is currently unavailable and very busy at the moment and has stated to us that he may not be able to meet once a week as of now.
+
+Details of Meeting 1 with Partner: 
 
 Describe meetings (and other events) you are planning to have. 
  * When and where? Recurring or ad hoc? In-person or online?
@@ -178,6 +183,14 @@ Describe meetings (and other events) you are planning to have.
    * You must have a regular meeting schedule established for the rest of the term.  
   
 #### Q9: How will you organize your team?
+
+To organize our team we created a Task Board with a TODO lists with each team member's allocated tasks. We compile our meeting minutes under the doucments/minutes folder as well as in Google Docs. 
+
+To keep track of what needs to get done, we use Github to sync our work/code together. Our TA and Partner has access to our Github Repo. 
+
+How to Prioritize tasks: We allocate tasks to each team member based on their compentency at the task. For example, a team member who has a lot of experience with frontend React(JS) will help with the frontend while another team member who has experience with databases with work with the backend.
+
+To determine the status of work from inception to completion: First we verify that the functions/implementations we created works in accordance to our needs/expectations. Then we double-check our functionalities with our partner to see if anything needs to be changed/improved. Finally once our partner confirms that our implementation is good and correct, the work will be complete.
 
 List/describe the artifacts you will produce in order to organize your team.       
 
@@ -191,7 +204,15 @@ List/describe the artifacts you will produce in order to organize your team.
 #### Q10: What are the rules regarding how your team works?
 
 **Communications:**
- * What is the expected frequency? What methods/channels will be used? 
+Our team is expected to work every week if possible on our tasks. We will allocate deadlines for each task. Our channel of communication will be email and Discord. Our channel of communication with our partner will be email and Google Meet. 
+
+**Collaboration:**
+People are held accountable by constant communication via Email/Discord. We have a team leader, Will, that serves our moderator to ensure everyone is on the right track and attends meetings/do their tasks on time. 
+
+If someone does not contribute to the project, we will contact him immediately. If the person still remains unresponsive and does not provide a good reason for not contributing, we will contact the TA/Professor. Then we will allocate the duties of that person to everyone so that we will not fall behind in schedule. 
+
+**Communications:**
+ * What is the expected frequency? What methods/channels will be used?
  * If you have a partner project, what is your process for communicating with your partner?
  
 **Collaboration: (Share your responses to Q8 & Q9 from A1)**

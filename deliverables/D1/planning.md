@@ -1,10 +1,13 @@
-# YOUR PRODUCT/TEAM NAME
+# Apache Superset/The Innovators Alliance
 > _Note:_ This document will evolve throughout your project. You commit regularly to this file while working on the project (especially edits/additions/deletions to the _Highlights_ section). 
  > **This document will serve as a master plan between your team, your partner and your TA.**
 
 ## Product Details
  
 #### Q1: What is the product?
+
+The product is a plugin that is used to visualize data over Earth’s geography. The existing plugin is unviable for UNICEF and other target parties at the moment. The plugin would follow Apache Superset's new approach for plugins, which used Javascript with React framework. The plugin would be used to estimate population, allow reviewing similar estimates, select different configurations of the country boundaries. The plugin intends on making the most out of existing data sets.
+
 
  > Short (1 - 2 min' read)
  * Start with a single sentence, high-level description of the product.
@@ -21,11 +24,22 @@
 
 #### Q2: Who are your target users?
 
+1. UNICEF personnel will use the plug-in to visualize data relevant to the country they work in for their mission planning activities. 
+2. Everyone who wishes to use the plug-in to visualize data. While UNICEF personnel are the primary targets, researchers/students in fields like Social Sciences, Geography, Data Sciences who wish to explore and understand the data can freely use this plug-in.
+3. Government personnel will use the plug-in to visualize data relevant to the country they work in for their mission planning activities. 
+
+
   > Short (1 - 2 min' read max)
  * Be specific (e.g. a 'a third-year university student studying Computer Science' and not 'a student')
  * **Feel free to use personas. You can create your personas as part of this Markdown file, or add a link to an external site (for example, [Xtensio](https://xtensio.com/user-persona/)).**
 
+
 #### Q3: Why would your users choose your product? What are they using today to solve their problem/need?
+
+Currently, our partner uses a static set of data describing geographical boundaries. The problem is these boundaries are always changing which leads to inaccurate data.
+-example use case: some population metrics in developing countries are being measured using an overhead visualization of the amount of light coming from a region. This data is unreliable if we don’t know the specific region to look at.
+
+Furthermore, the current existing Apache Superset country map plugin does not support most of the countries UNICEF operates and is deprecated. Our product will support data for more countries that UNICEF operates with additional functionalites such as the ability to configure an Apache Superset instance to load different or custom country boundary data.
 
 > Short (1 - 2 min' read max)
  * We want you to "connect the dots" for us - Why does your product (as described in your answer to Q1) fits the needs of your users (as described in your answer to Q2)?
@@ -36,20 +50,51 @@
     * Does this application exist in another form? If so, how does your differ and provide value to the users?
     * How does this align with your partner's organization's values/mission/mandate?
 
+
 #### Q4: What are the user stories that make up the Minumum Viable Product (MVP)?
+
+As a UNICEF personnel, I want to use this plugin in order to visualize population data over Uganda in order to plan stop locations for a humanitarian aid mission.
+
+As a UNICEF personnel, I want to use this plugin in order to look at routes over South Africa in order to plan an itinerary taking minimum time & distance, and least disruptions for a humanitarian aid mission.
+
+As a student, I want to use this plugin in order to do research involving geographical analysis of different data sets such as population distribution.
+
+As a Government Personnel, I want to use this plugin in order to visualize vehicle traffic data over my country so that I can make informed decisions on urban planning to improve traffic conditions.
+
+As a humanitarian project manager I want to be able to present data about countries to my team members in a visual way by using a choropleth visualization, to better explain project goals.
+
+
+As a UNICEF data analyst, I want a plugin for Apache Superset that provides improved geographic visualizations, so I can better visualize and analyze data relevant to the country I work in using choropleth maps at the first subnational administrative level (provinces, districts, states, etc).
+As a UNICEF data scientist, I want the plugin to support comprehensive data for as many countries as possible and allow me to configure custom country boundary data sources within our Apache Superset instance, so I can create accurate and customizable geographic visualizations for decision-making.
+As a UNICEF project manager, I want the new Apache Superset plugin to replace the existing country mapping plugin, which is considered deprecated and supports only a limited number of countries. This will ensure that our organization has up-to-date and reliable geographic visualizations for all countries where UNICEF operates.
+As a UNICEF decision maker, I want to use the improved geographic visualization plugin to make data-driven decisions that will benefit children around the world. The plugin should help me easily understand and communicate data through choropleth maps, aiding in our mission to improve children's lives.
+As a UNICEF IT administrator, I want our technical team to deploy and integrate the new Apache Superset plugin seamlessly into our enterprise Superset instance, making it available for all UNICEF personnel to use. This will ensure that our colleagues have easy access to powerful geographic visualization tools.
+
+UNICEF personnel: Humanitarian mission planning
+Researcher/Students: Social Sciences, Geography, Civil engineering, Data scientists, Architecture
+Government Personnel: Humanitarian mission planning, Urban events planning
+
 
  * At least 5 user stories concerning the main features of the application - note that this can broken down further
  * You must follow proper user story format (as taught in lecture) ```As a <user of the app>, I want to <do something in the app> in order to <accomplish some goal>```
  * User stories must contain acceptance criteria. Examples of user stories with different formats can be found here: https://www.justinmind.com/blog/user-story-examples/. **It is important that you provide a link to an artifact containing your user stories**.
  * If you have a partner, these must be reviewed and accepted by them. You need to include the evidence of partner approval (e.g., screenshot from email) or at least communication to the partner (e.g., email you sent)
 
+
 #### Q5: Have you decided on how you will build it? Share what you know now or tell us the options you are considering.
+
+Frameworks/Languages : Python, React (JS), Apache Superset, NRDBMS.
+
+How to deploy: waiting on the partner.
+
+Describe the architecture: waiting on the partner.
 
 > Short (1-2 min' read max)
  * What is the technology stack? Specify languages, frameworks, libraries, PaaS products or tools to be used or being considered. 
  * How will you deploy the application?
  * Describe the architecture - what are the high level components or patterns you will use? Diagrams are useful here. 
  * Will you be using third party applications or APIs? If so, what are they?
+
 
 ----
 ## Intellectual Property Confidentiality Agreement 
@@ -72,6 +117,18 @@ Briefly describe which option you have agreed to.
 
 #### Q6: Have you met with your team?
 
+Team Building Activity:
+
+Share a picture: 
+
+Fun Facts:
+Parth: I used to be a DJ in high school.
+Justin: I never had Mc Chicken at McDonalds.
+David: I am building games with Unity. 
+Vala: I actually enjoy using Assembly. 
+Luke: I think greentea with yakult is the best drink in the world. (But you can’t find the best one in canada)
+Sunny: I 
+
 Do a team-building activity in-person or online. This can be playing an online game, meeting for bubble tea, lunch, or any other activity you all enjoy.
 * Get to know each other on a more personal level.
 * Provide a few sentences on what you did and share a picture or other evidence of your team building activity.
@@ -79,6 +136,14 @@ Do a team-building activity in-person or online. This can be playing an online g
 
 
 #### Q7: What are the roles & responsibilities on the team?
+
+Parth: 
+Justin:
+David:
+Vala: 
+Luke: 
+Will: Partner Liaison, Leader of the team,  
+Sunny: 
 
 Describe the different roles on the team and the responsibilities associated with each role. 
  * Roles should reflect the structure of your team and be appropriate for your project. One person may have multiple roles.  
@@ -121,3 +186,5 @@ List/describe the artifacts you will produce in order to organize your team.
 **Collaboration: (Share your responses to Q8 & Q9 from A1)**
  * How are people held accountable for attending meetings, completing action items? Is there a moderator or process?
  * How will you address the issue if one person doesn't contribute or is not responsive? 
+
+

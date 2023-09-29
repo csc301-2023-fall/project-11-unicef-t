@@ -123,11 +123,16 @@ Share a picture:
 
 Fun Facts:
 Parth: I used to be a DJ in high school.
+
 Justin: I never had Mc Chicken at McDonalds.
+
 David: I am building games with Unity. 
+
 Vala: I actually enjoy using Assembly. 
+
 Luke: I think greentea with yakult is the best drink in the world. (But you can’t find the best one in canada)
-Sunny: I 
+
+Sunny: I can speak a dialect of Canadian french called Chiac (Used in Atlantic Canada) 
 
 Do a team-building activity in-person or online. This can be playing an online game, meeting for bubble tea, lunch, or any other activity you all enjoy.
 * Get to know each other on a more personal level.
@@ -138,11 +143,17 @@ Do a team-building activity in-person or online. This can be playing an online g
 #### Q7: What are the roles & responsibilities on the team?
 
 Parth: 
+
 Justin:
+
 David:
+
 Vala: 
+
 Luke: 
+
 Will: Partner Liaison, Leader of the team,  
+
 Sunny: 
 
 Describe the different roles on the team and the responsibilities associated with each role. 

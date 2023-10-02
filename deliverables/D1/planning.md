@@ -63,11 +63,12 @@ As a Government Personnel, I want to use this plugin in order to visualize vehic
 
 As a humanitarian project manager I want to be able to present data about countries to my team members in a visual way by using a choropleth visualization, to better explain project goals.
 
-
 As a UNICEF data analyst, I want a plugin for Apache Superset that provides improved geographic visualizations, so I can better visualize and analyze data relevant to the country I work in using choropleth maps at the first subnational administrative level (provinces, districts, states, etc).
+
 As a UNICEF data scientist, I want the plugin to support comprehensive data for as many countries as possible and allow me to configure custom country boundary data sources within our Apache Superset instance, so I can create accurate and customizable geographic visualizations for decision-making.
-As a UNICEF project manager, I want the new Apache Superset plugin to replace the existing country mapping plugin, which is considered deprecated and supports only a limited number of countries. This will ensure that our organization has up-to-date and reliable geographic visualizations for all countries where UNICEF operates.
+
 As a UNICEF decision maker, I want to use the improved geographic visualization plugin to make data-driven decisions that will benefit children around the world. The plugin should help me easily understand and communicate data through choropleth maps, aiding in our mission to improve children's lives.
+
 As a UNICEF IT administrator, I want our technical team to deploy and integrate the new Apache Superset plugin seamlessly into our enterprise Superset instance, making it available for all UNICEF personnel to use. This will ensure that our colleagues have easy access to powerful geographic visualization tools.
 
 UNICEF personnel: Humanitarian mission planning
@@ -152,7 +153,7 @@ Do a team-building activity in-person or online. This can be playing an online g
 
 * Luke: 
 
-* Will: Partner Liaison, Leader of the team,  
+* Will: Partner Liaison, Leader of the team
 
 * Sunny: 
 

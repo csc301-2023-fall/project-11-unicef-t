@@ -12,6 +12,7 @@ Our code is open-source. You can clone our repository using Git.
 **3. Key development requirements installing and running the application**
 
 apache-superset 3.0. 0.
+
 Python 3.9.7 and above
 
 **4. External dependencies and third-party software**

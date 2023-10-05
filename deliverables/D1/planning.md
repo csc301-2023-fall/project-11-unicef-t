@@ -6,7 +6,9 @@
  
 #### Q1: What is the product?
 
-The product is a plugin that is used to visualize data over Earth’s geography. The existing plugin is unviable for UNICEF and other target parties at the moment. The plugin would follow Apache Superset's new approach for plugins, which used Javascript with React framework. The plugin would be used to estimate population, allow reviewing similar estimates, select different configurations of the country boundaries. The plugin intends on making the most out of existing data sets. Our plugin will introduce new features such as country map integration with real-time data, satellite imagery, and other features that may be requested by our partner.
+The product is a plugin that is used to visualize data over Earth’s geography. The existing plugin is unviable for UNICEF and other target parties at the moment. The plugin would follow Apache Superset's new approach for plugins, which used Javascript with React framework. The plugin would be used to estimate population, allow reviewing similar estimates, select different configurations of the country boundaries. The plugin intends on making the most out of existing data sets. Our plugin will introduce new features such as country map integration with real-time data, satellite imagery, and other features that may be requested by our partner.  
+
+Here is a video showing how the current plugin works. Our product will be very simliar: https://www.youtube.com/watch?v=NTD8-maahZg
 
 
  > Short (1 - 2 min' read)

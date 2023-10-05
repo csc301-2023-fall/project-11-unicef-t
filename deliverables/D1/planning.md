@@ -101,7 +101,10 @@ Frameworks/Languages : Python, React (JS), Apache Superset, NRDBMS.
 
 How to deploy: waiting on the partner.
 
-Describe the architecture: waiting on the partner.
+Describe the architecture: 
+The program is a plugin for Apache Superset, so it will use the framework that already exists for the Superset as a base. The code will be almost exclusively JavaScript and TypeScript. The typescript will be used along the React framework to generate the visualizations needed. The plugin will also need functionality to accept SQL queries, which can be provided with the existing Superset framework that the plugin will be built on. 
+Many different file types must be supported (such as JSON, GeoJSON, CSV, etc.) in order to provide data for the map visualization. 
+The backend of the program will be written using Node.js, since this is the recommended system to use for creating visualization plugins by Superset. This section will be responsible for parsing the data that is provided to calculate the correct way to show the map visualization.
 
 > Short (1-2 min' read max)
  * What is the technology stack? Specify languages, frameworks, libraries, PaaS products or tools to be used or being considered. 

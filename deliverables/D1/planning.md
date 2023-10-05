@@ -133,7 +133,9 @@ Fun Facts:
 
 * Luke: I think greentea with yakult is the best drink in the world. (But you can’t find the best one in canada)
 
-* Sunny: I can speak a dialect of Canadian french called Chiac (Used in Atlantic Canada) 
+* Sunny: I can speak a dialect of Canadian french called Chiac (Used in Atlantic Canada)
+
+* William: My favourite drink flavour is grape.
 
 Do a team-building activity in-person or online. This can be playing an online game, meeting for bubble tea, lunch, or any other activity you all enjoy.
 * Get to know each other on a more personal level.

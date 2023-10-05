@@ -99,7 +99,7 @@ Government Personnel: Humanitarian mission planning, Urban events planning
 
 Frameworks/Languages : Python, React (JS), Apache Superset, NRDBMS.
 
-How to deploy: waiting on the partner.
+How to deploy: This is an open source plugin and will be deployed through Apache Superset.
 
 Describe the architecture: 
 The program is a plugin for Apache Superset, so it will use the framework that already exists for the Superset as a base. The code will be almost exclusively JavaScript and TypeScript. The typescript will be used along the React framework to generate the visualizations needed. The plugin will also need functionality to accept SQL queries, which can be provided with the existing Superset framework that the plugin will be built on. 

@@ -52,7 +52,7 @@ Furthermore, the current existing Apache Superset country map plugin does not su
 
 
 #### Q4: What are the user stories that make up the Minumum Viable Product (MVP)?
-Artifacts for user stories are not found online as it is specific to UNICEF. These were discussed in the meetings.  
+**Artifacts for user stories are not found online as it is specific to UNICEF. These were discussed in the meetings and verified by our partner.** 
 
 User Story 1:
 As a UNICEF personnel, I want to use this plugin in order to navigate a population heat map, allowing different data sources to be interpreted by the map.  

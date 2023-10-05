@@ -196,6 +196,7 @@ We meet every Thursday online at 8pm during tutorial and every Friday in-person 
 We intend to have regular meetings with our partner once a week. However our partner is currently unavailable and very busy at the moment and has stated to us that he may not be able to meet once a week as of now.
 
 Details of Meeting 1 with Partner: 
+In our initial meeting with the partner, he provided a brief introduction of himself and UNICEF. We then had a discussion regarding the project's motivation, including the reasons for this project and its scope. Furthermore, the partner outlined the expected project outcomes, including what the project should achieve and how users would use the plug-in. He also briefly mentioned the user stories and how it makes up to the minimum viable product. He mentioned that how the project should build on existing plug-in as well. Finally, he highlighted how the project could support him and his colleagues in fulfilling their mission.
 
 Describe meetings (and other events) you are planning to have. 
  * When and where? Recurring or ad hoc? In-person or online?
@@ -204,6 +205,11 @@ Describe meetings (and other events) you are planning to have.
  * You should have 2 meetings with your project partner (if you have one) before D1 is due. Describe them here:
    * You must keep track of meeting minutes and add them to your repo under "documents/minutes" folder
    * You must have a regular meeting schedule established for the rest of the term.  
+
+first meeting: Brief introduction on partner himself and UNICEF, Briefly mentioned about the project motivation, expected outcomes, user stories, technical consideration.
+
+second meeting: Confirmation on user stories, overall view on the project.
+
   
 #### Q9: How will you organize your team?
 

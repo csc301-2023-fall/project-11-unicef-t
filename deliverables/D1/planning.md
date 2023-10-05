@@ -118,7 +118,7 @@ Briefly describe which option you have agreed to.
 
 #### Q6: Have you met with your team?
 
-Team Building Activity:
+Team Building Activity: 
 
 Share a picture: 
 
@@ -143,19 +143,22 @@ Do a team-building activity in-person or online. This can be playing an online g
 
 #### Q7: What are the roles & responsibilities on the team?
 
-* Parth: 
+* Parth: DevOps, Frontend Developer. Manages deployment, continuous integration of plugin and developing the client-side components of the plugin.
 
-* Justin:
+* Justin: UI/UX Designer, Frontend Developer. Focuses on the user interface and user experience design and developing the client-side components of the plugin
 
-* David:
+* David: UI/UX Designer, Backend Developer. Focuses on the user interface and user experience design and developing the server-side aspects of the plugin.
 
-* Vala: 
+* Vala: DevOps, UI/UX Designer. Manages deployment, continuous integration of plugin and user interface and user experience design.
 
-* Luke: 
+* Luke: DevOps, Backend Developer. Manages deployment, continuous integration of plugin and developing the server-side aspects of the plugin.
 
-* Will: Partner Liaison, Leader of the team
+* Will: Partner Liaison, Leader of the team, Product Manager. Responsible for overall project coordination, setting goals, creating timelines, and ensuring that the project stays on track. They also facilitate communication within the group and with external stakeholders.
 
-* Sunny: 
+* Sunny: DevOps, Frontend Developer. Manages deployment, continuous integration of plugin and developing the client-side components of the plugin.
+
+Each member was allocated their role based on their skills, experience and enthusiasim to take up the task.
+
 
 Describe the different roles on the team and the responsibilities associated with each role. 
  * Roles should reflect the structure of your team and be appropriate for your project. One person may have multiple roles.  

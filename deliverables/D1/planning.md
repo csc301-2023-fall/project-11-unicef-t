@@ -119,11 +119,13 @@ Briefly describe which option you have agreed to.
 #### Q6: Have you met with your team?
 
 Team Building Activity: 
+We met in person to discuss our project at Bahen. We introduced ourselves and our level of experience in various coding fields. To break the ice, we played scribbl.io with each other as a team bonding activity.
 
-Share a picture: ![image](https://github.com/csc301-2023-fall/project-11-unicef-t/assets/83163126/61a904f5-744d-4cf2-9a8c-599f442c2f93)
+Share a picture:
+![image](https://github.com/csc301-2023-fall/project-11-unicef-t/assets/83163126/61a904f5-744d-4cf2-9a8c-599f442c2f93)
 
 
-Fun Facts:
+Some Fun Facts about us:
 * Parth: I used to be a DJ in high school.
 
 * Justin: I never had Mc Chicken at McDonalds.

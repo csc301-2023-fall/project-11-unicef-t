@@ -120,7 +120,7 @@ The backend of the program will be written using Node.js, since this is the reco
 
 **Your partner cannot ask you to sign any legal agreements or documents pertaining to non-disclosure, confidentiality, IP ownership, etc.**
 
-Briefly describe which option you have agreed to.
+We have decided on **option 2**.
 
 ----
 
@@ -163,7 +163,7 @@ Do a team-building activity in-person or online. This can be playing an online g
 
 * Justin: UI/UX Designer, Frontend Developer. Focuses on the user interface and user experience design and developing the client-side components of the plugin
 
-* David: UI/UX Designer, Backend Developer. Focuses on the user interface and user experience design and developing the server-side aspects of the plugin.
+* David: UI/UX Designer, Backend Developer, Product Manager. Focuses on the user interface and user experience design and developing the server-side aspects of the plugin. Responsible for overall project coordination.
 
 * Vala: DevOps, UI/UX Designer. Manages deployment, continuous integration of plugin and user interface and user experience design.
 

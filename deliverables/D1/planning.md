@@ -53,23 +53,25 @@ Furthermore, the current existing Apache Superset country map plugin does not su
 
 #### Q4: What are the user stories that make up the Minumum Viable Product (MVP)?
 
-As a UNICEF personnel, I want to use this plugin in order to visualize population data over Uganda in order to plan stop locations for a humanitarian aid mission.
+User Story 1:
+As a UNICEF personnel, I want to use this plugin in order to navigate a population heat map, allowing different data sources to be interpreted by the map.
+Acceptance Criteria: A UNICEF worker will be able to navigate the map and easily use the map with different data sources.
 
-As a UNICEF personnel, I want to use this plugin in order to look at routes over South Africa in order to plan an itinerary taking minimum time & distance, and least disruptions for a humanitarian aid mission.
+User Story 2:
+As a UNICEF personnel, I want to use this plugin in order to access features not available on our current map plugin
+Acceptance Criteria: A UNICEF worker should have access to new features: filtering by population, see different regions of countries.
 
-As a student, I want to use this plugin in order to do research involving geographical analysis of different data sets such as population distribution.
+User Story 3:
+As a student, I want to use this plugin in order to conduct research using different types of visualizations beyond a chloropath.
+Acceptance Criteria: Students will be able to install this plugin and use it to conduct research using the population estimates from the map.
 
-As a Government Personnel, I want to use this plugin in order to visualize vehicle traffic data over my country so that I can make informed decisions on urban planning to improve traffic conditions.
+User Story 4:
+As a Government Personnel, I want to use this plugin in order to clearly identify the differences between districts and states in a given region.
+Acceptance Criteria: It will be easy for the user to navigate to different districts and states and find accurate population estimates.
 
-As a humanitarian project manager I want to be able to present data about countries to my team members in a visual way by using a choropleth visualization, to better explain project goals.
-
-As a UNICEF data analyst, I want a plugin for Apache Superset that provides improved geographic visualizations, so I can better visualize and analyze data relevant to the country I work in using choropleth maps at the first subnational administrative level (provinces, districts, states, etc).
-
-As a UNICEF data scientist, I want the plugin to support comprehensive data for as many countries as possible and allow me to configure custom country boundary data sources within our Apache Superset instance, so I can create accurate and customizable geographic visualizations for decision-making.
-
-As a UNICEF decision maker, I want to use the improved geographic visualization plugin to make data-driven decisions that will benefit children around the world. The plugin should help me easily understand and communicate data through choropleth maps, aiding in our mission to improve children's lives.
-
-As a UNICEF IT administrator, I want our technical team to deploy and integrate the new Apache Superset plugin seamlessly into our enterprise Superset instance, making it available for all UNICEF personnel to use. This will ensure that our colleagues have easy access to powerful geographic visualization tools.
+User Story 5:
+As a humanitarian project manager, I want to be able to look at populations in different areas, and filter areas for different populations
+Acceptance Criteria: The user will be able to filter for different general areas, as well as for different populations, in order to gather data for their needs.
 
 UNICEF personnel: Humanitarian mission planning
 Researcher/Students: Social Sciences, Geography, Civil engineering, Data scientists, Architecture

@@ -19,3 +19,5 @@ Description system framework:
 Building Custom Viz Plugins in Superset v2 (Updated for Monorepo) | Preset
 Different dimensions as different layers, visualizations beyond a chloropath
 How the plug-in should look like
+
+Meeting duration: 35 minutes

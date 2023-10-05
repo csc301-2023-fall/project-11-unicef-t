@@ -1,0 +1,2 @@
+This mockup was created by our partner. There is an existing plugin that Apache Superset currently uses but it being deprecated. Our plugin is to be designed similarly, and use a more dynamic way of pulling and displaying data. The UI however will look very similar to the current plugin.  
+![image](https://github.com/csc301-2023-fall/project-11-unicef-t/assets/72054183/fbbd0889-cde1-44ac-a163-e7670ffc7e2f)

@@ -1,8 +1,8 @@
 Member number,utorid,Student name,Githubid,Status,Role
-1,,,,,
-2,crosswi1,William Jarvis-Cross,WillJarvis-Cross,enrolled,
-3,,,,,
-4,kuokuanl,Kuan-Lin Kuo,PenguinKuo007,enrolled,
-5,jalalva1,Vala Jalalvandi, vjalal,enrolled,
-6,majianx1,Jianxiang Ma,DavidM0808,enrolled,
-7,zheng255,Justin Zeyong Zheng,justinzzy-code,enrolled,
+1,,,,enrolled,"DevOps,Frontend Developer"
+2,crosswi1,William Jarvis-Cross,WillJarvis-Cross,enrolled,"Project Manager,Lead Developer"
+3,,,,enrolled,"DevOps,Frontend Developer"
+4,kuokuanl,Kuan-Lin Kuo,PenguinKuo007,enrolled,"DevOps,Backend Developer"
+5,jalalva1,Vala Jalalvandi, vjalal,enrolled,"DevOps,UI/UX Designer"
+6,majianx1,Jianxiang Ma,DavidM0808,enrolled,"UI/UX Designer,Backend Developer"
+7,zheng255,Justin Zeyong Zheng,justinzzy-code,enrolled,"UI/UX Designer, Frontend Developer"

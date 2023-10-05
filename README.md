@@ -1,7 +1,5 @@
 # Data Plug-in/Innovative Alliance
 ​
-> _Note:_ This document is intended to be relatively short. Be concise and precise. Assume the reader has no prior knowledge of your application and is non-technical. 
-​
 ## Partner Intro
 Evan Wheeler, e.wheeler@unicef.org, chief technology officer at UNICEF's Global Innovation Centre.
 

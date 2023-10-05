@@ -11,18 +11,6 @@ The product is a plugin that is used to visualize data over Earth’s geography.
 Here is a video showing how the current plugin works. Our product will be very simliar: https://www.youtube.com/watch?v=NTD8-maahZg
 
 
- > Short (1 - 2 min' read)
- * Start with a single sentence, high-level description of the product.
- * Be clear - Describe the problem you are solving in simple terms.
- * Specify if you have a partner and who they are.
- * Be concrete. For example:
-    * What are you planning to build? Is it a website, mobile app, browser extension, command-line app, etc.?      
-    * When describing the problem/need, give concrete examples of common use cases.
-    * Assume your the reader knows nothing about the partner or the problem domain and provide the necessary context. 
- * Focus on *what* your product does, and avoid discussing *how* you're going to implement it.      
-   For example: This is not the time or the place to talk about which programming language and/or framework you are planning to use.
- * **Feel free (and very much encouraged) to include useful diagrams, mock-ups and/or links**.
-
 
 #### Q2: Who are your target users?
 
@@ -30,10 +18,6 @@ Here is a video showing how the current plugin works. Our product will be very s
 2. Everyone who wishes to use the plug-in to visualize data. While UNICEF personnel are the primary targets, researchers/students in fields like Social Sciences, Geography, Data Sciences who wish to explore and understand the data can freely use this plug-in.
 3. Government personnel will use the plug-in to visualize data relevant to the country they work in for their mission planning activities. 
 
-
-  > Short (1 - 2 min' read max)
- * Be specific (e.g. a 'a third-year university student studying Computer Science' and not 'a student')
- * **Feel free to use personas. You can create your personas as part of this Markdown file, or add a link to an external site (for example, [Xtensio](https://xtensio.com/user-persona/)).**
 
 
 #### Q3: Why would your users choose your product? What are they using today to solve their problem/need?
@@ -43,14 +27,6 @@ Currently, our partner uses a static set of data describing geographical boundar
 
 Furthermore, the current existing Apache Superset country map plugin does not support most of the countries UNICEF operates and is deprecated. Our product will support data for more countries that UNICEF operates with additional functionalites such as the ability to configure an Apache Superset instance to load different or custom country boundary data.
 
-> Short (1 - 2 min' read max)
- * We want you to "connect the dots" for us - Why does your product (as described in your answer to Q1) fits the needs of your users (as described in your answer to Q2)?
- * Explain the benefits of your product explicitly & clearly. For example:
-    * Save users time (how and how much?)
-    * Allow users to discover new information (which information? And, why couldn't they discover it before?)
-    * Provide users with more accurate and/or informative data (what kind of data? Why is it useful to them?)
-    * Does this application exist in another form? If so, how does your differ and provide value to the users?
-    * How does this align with your partner's organization's values/mission/mandate?
 
 
 #### Q4: What are the user stories that make up the Minumum Viable Product (MVP)?
@@ -91,11 +67,6 @@ Verification Evidence:
 <img width="790" alt="Screenshot 2023-10-04 at 10 09 08 PM" src="https://github.com/csc301-2023-fall/project-11-unicef-t/assets/72054183/bd3d0808-ef59-48ec-a8af-0928b6cf3ae0">
 
 
-
- * At least 5 user stories concerning the main features of the application - note that this can broken down further
- * You must follow proper user story format (as taught in lecture) ```As a <user of the app>, I want to <do something in the app> in order to <accomplish some goal>```
- * User stories must contain acceptance criteria. Examples of user stories with different formats can be found here: https://www.justinmind.com/blog/user-story-examples/. **It is important that you provide a link to an artifact containing your user stories**.
- * If you have a partner, these must be reviewed and accepted by them. You need to include the evidence of partner approval (e.g., screenshot from email) or at least communication to the partner (e.g., email you sent)
 
 
 #### Q5: Have you decided on how you will build it? Share what you know now or tell us the options you are considering.
@@ -154,10 +125,6 @@ Some Fun Facts about us:
 
 * William: My favourite drink flavour is grape.
 
-Do a team-building activity in-person or online. This can be playing an online game, meeting for bubble tea, lunch, or any other activity you all enjoy.
-* Get to know each other on a more personal level.
-* Provide a few sentences on what you did and share a picture or other evidence of your team building activity.
-* Share at least three fun facts from members of you team (total not 3 for each member).
 
 
 #### Q7: What are the roles & responsibilities on the team?
@@ -179,17 +146,6 @@ Do a team-building activity in-person or online. This can be playing an online g
 Each member was allocated their role based on their skills, experience and enthusiasim to take up the task.
 
 
-Describe the different roles on the team and the responsibilities associated with each role. 
- * Roles should reflect the structure of your team and be appropriate for your project. One person may have multiple roles.  
- * Add role(s) to your Team-[Team_Number]-[Team_Name].csv file on the main folder.
- * At least one person must be identified as the dedicated partner liaison. They need to have great organization and communication skills.
- * Everyone must contribute to code. Students who don't contribute to code enough will receive a lower mark at the end of the term.
-
-List each team member and:
- * A description of their role(s) and responsibilities including the components they'll work on and non-software related work
- * Why did you choose them to take that role? Specify if they are interested in learning that part, experienced in it, or any other reasons. Do no make things up. This part is not graded but may be reviewed later.
-
-
 #### Q8: How will you work as a team?
 We meet every Thursday online at 8pm during tutorial and every Friday in-person in Bahen at 2pm. The purposes of each meeting include project discussions, assigning tasks, coding sessions, code reviews and writing reports.
 
@@ -198,17 +154,9 @@ We intend to have regular meetings with our partner once a week. However our par
 Details of Meeting 1 with Partner: 
 In our initial meeting with the partner, he provided a brief introduction of himself and UNICEF. We then had a discussion regarding the project's motivation, including the reasons for this project and its scope. Furthermore, the partner outlined the expected project outcomes, including what the project should achieve and how users would use the plug-in. He also briefly mentioned the user stories and how it makes up to the minimum viable product. He mentioned that how the project should build on existing plug-in as well. Finally, he highlighted how the project could support him and his colleagues in fulfilling their mission.
 
-Describe meetings (and other events) you are planning to have. 
- * When and where? Recurring or ad hoc? In-person or online?
- * What's the purpose of each meeting?
- * Other events could be coding sessions, code reviews, quick weekly sync meeting online, etc.
- * You should have 2 meetings with your project partner (if you have one) before D1 is due. Describe them here:
-   * You must keep track of meeting minutes and add them to your repo under "documents/minutes" folder
-   * You must have a regular meeting schedule established for the rest of the term.  
+First meeting: Brief introduction on partner himself and UNICEF, Briefly mentioned about the project motivation, expected outcomes, user stories, technical consideration.
 
-first meeting: Brief introduction on partner himself and UNICEF, Briefly mentioned about the project motivation, expected outcomes, user stories, technical consideration.
-
-second meeting: Confirmation on user stories, overall view on the project.
+Second meeting: Confirmation on user stories, overall view on the project.
 
   
 #### Q9: How will you organize your team?
@@ -221,14 +169,6 @@ How to Prioritize tasks: We allocate tasks to each team member based on their co
 
 To determine the status of work from inception to completion: First we verify that the functions/implementations we created works in accordance to our needs/expectations. Then we double-check our functionalities with our partner to see if anything needs to be changed/improved. Finally once our partner confirms that our implementation is good and correct, the work will be complete.
 
-List/describe the artifacts you will produce in order to organize your team.       
-
- * Artifacts can be To-Do lists, Task boards, schedule(s), meeting minutes, etc.
- * We want to understand:
-   * How do you keep track of what needs to get done? (You must grant your TA and partner access to systems you use to manage work)
-   * **How do you prioritize tasks?**
-   * How do tasks get assigned to team members?
-   * How do you determine the status of work from inception to completion?
 
 #### Q10: What are the rules regarding how your team works?
 
@@ -239,13 +179,5 @@ Our team is expected to work every week if possible on our tasks. We will alloca
 People are held accountable by constant communication via Email/Discord. We have a team leader, Will, that serves our moderator to ensure everyone is on the right track and attends meetings/do their tasks on time. 
 
 If someone does not contribute to the project, we will contact him immediately. If the person still remains unresponsive and does not provide a good reason for not contributing, we will contact the TA/Professor. Then we will allocate the duties of that person to everyone so that we will not fall behind in schedule. 
-
-**Communications:**
- * What is the expected frequency? What methods/channels will be used?
- * If you have a partner project, what is your process for communicating with your partner?
- 
-**Collaboration: (Share your responses to Q8 & Q9 from A1)**
- * How are people held accountable for attending meetings, completing action items? Is there a moderator or process?
- * How will you address the issue if one person doesn't contribute or is not responsive? 
 
 

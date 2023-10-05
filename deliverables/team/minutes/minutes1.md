@@ -14,3 +14,6 @@ Try to design that allows a future developer to know that there is a configurati
 We get these datasets ourselves, specifically the data that UNICEF hasn’t looked at but would be beneficial.
 The plug-in will be written using (?)
 Main users: UNICEF staffs, Superset communities
+
+
+Meeting minutes: 1 hour

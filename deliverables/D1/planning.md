@@ -52,30 +52,41 @@ Furthermore, the current existing Apache Superset country map plugin does not su
 
 
 #### Q4: What are the user stories that make up the Minumum Viable Product (MVP)?
+Artifacts for user stories are not found online as it is specific to UNICEF. These were discussed in the meetings.  
 
 User Story 1:
-As a UNICEF personnel, I want to use this plugin in order to navigate a population heat map, allowing different data sources to be interpreted by the map.
+As a UNICEF personnel, I want to use this plugin in order to navigate a population heat map, allowing different data sources to be interpreted by the map.  
 Acceptance Criteria: A UNICEF worker will be able to navigate the map and easily use the map with different data sources.
 
 User Story 2:
-As a UNICEF personnel, I want to use this plugin in order to access features not available on our current map plugin
-Acceptance Criteria: A UNICEF worker should have access to new features: filtering by population, see different regions of countries.
+As a UNICEF personnel, I want to use this plugin in order to use filter options for populations.       
+Acceptance Criteria: A UNICEF worker should have access to filtering areas for populations.
 
 User Story 3:
-As a student, I want to use this plugin in order to conduct research using different types of visualizations beyond a chloropath.
-Acceptance Criteria: Students will be able to install this plugin and use it to conduct research using the population estimates from the map.
+As a UNICEF personnel, I want to use this plugin in order to use look at more narrow and broad regions and their populations.       
+Acceptance Criteria: A UNICEF worker should have access to different regions including small and big regions.
 
 User Story 4:
-As a Government Personnel, I want to use this plugin in order to clearly identify the differences between districts and states in a given region.
-Acceptance Criteria: It will be easy for the user to navigate to different districts and states and find accurate population estimates.
+As a student, I want to use this plugin in order to conduct research using different types of visualizations beyond a chloropath.  
+Acceptance Criteria: Students will be able to install this plugin and use it to conduct research using the population estimates from the map.
 
 User Story 5:
-As a humanitarian project manager, I want to be able to look at populations in different areas, and filter areas for different populations
+As a Government Personnel, I want to use this plugin in order to clearly identify the differences between districts and states in a given region.  
+Acceptance Criteria: It will be easy for the user to navigate to different districts and states and find accurate population estimates.
+
+User Story 6:
+As a humanitarian project manager, I want to be able to look at populations in different areas, and filter areas for different populations  
 Acceptance Criteria: The user will be able to filter for different general areas, as well as for different populations, in order to gather data for their needs.
 
 UNICEF personnel: Humanitarian mission planning
 Researcher/Students: Social Sciences, Geography, Civil engineering, Data scientists, Architecture
 Government Personnel: Humanitarian mission planning, Urban events planning
+
+
+<img width="784" alt="Screenshot 2023-10-04 at 10 08 56 PM" src="https://github.com/csc301-2023-fall/project-11-unicef-t/assets/72054183/05ff49a8-56cd-4987-bd71-4dba30e91079">
+
+<img width="790" alt="Screenshot 2023-10-04 at 10 09 08 PM" src="https://github.com/csc301-2023-fall/project-11-unicef-t/assets/72054183/bd3d0808-ef59-48ec-a8af-0928b6cf3ae0">
+
 
 
  * At least 5 user stories concerning the main features of the application - note that this can broken down further

@@ -106,12 +106,6 @@ The program is a plugin for Apache Superset, so it will use the framework that a
 Many different file types must be supported (such as JSON, GeoJSON, CSV, etc.) in order to provide data for the map visualization. 
 The backend of the program will be written using Node.js, since this is the recommended system to use for creating visualization plugins by Superset. This section will be responsible for parsing the data that is provided to calculate the correct way to show the map visualization.
 
-> Short (1-2 min' read max)
- * What is the technology stack? Specify languages, frameworks, libraries, PaaS products or tools to be used or being considered. 
- * How will you deploy the application?
- * Describe the architecture - what are the high level components or patterns you will use? Diagrams are useful here. 
- * Will you be using third party applications or APIs? If so, what are they?
-
 
 ----
 ## Intellectual Property Confidentiality Agreement 

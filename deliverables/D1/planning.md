@@ -120,7 +120,7 @@ Briefly describe which option you have agreed to.
 
 Team Building Activity: 
 
-Share a picture: 
+Share a picture: ![image](https://github.com/csc301-2023-fall/project-11-unicef-t/assets/83163126/50e23656-f2de-4ead-b1c3-acb015dccee6)
 
 Fun Facts:
 * Parth: I used to be a DJ in high school.

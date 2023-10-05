@@ -16,4 +16,4 @@ The plug-in will be written using (?)
 Main users: UNICEF staffs, Superset communities
 
 
-Meeting minutes: 1 hour
+Meeting duration: 1 hour

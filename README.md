@@ -42,11 +42,5 @@ Additional instructions will be updated as the project progresses.
   * Maintainance (Documentation, Limiting function lengths and global variables)
 ​
  ## Licenses 
-​
- Keep this section as brief as possible. You may read this [Github article](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/licensing-a-repository) for a start.
-​
- * What type of license will you apply to your codebase? And why?
- * What affect does it have on the development and use of your codebase?
-
  The license we are using is a standard MIT license. We use this license to enforce some basic policies for any open source repositories.
  It has minimal effects on the development and use of our codebase.

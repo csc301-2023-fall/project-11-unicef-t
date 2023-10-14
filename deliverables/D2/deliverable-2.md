@@ -12,6 +12,7 @@ The map visualization group and the features group are connected because the ele
 ![image](https://github.com/csc301-2023-fall/project-11-unicef-t/assets/72054183/0f197ab7-6ebf-4fed-97e7-3b67d0039e64)
 
 <ins>Devops Group<ins/>
+This group is responsible for making sure the developer experience is smooth. We are using eslint and prettier for formatting, jest for testing, and loggly for the error logging system. This group is also responsible for the CI/CD pipeline. The main objective for this group is to set up these properties so the rest of the developers can code painlessly. This group will also teach the other groups these built features so they can use it to their advantage.
 
 <ins>Map Visualization Group<ins/>
 

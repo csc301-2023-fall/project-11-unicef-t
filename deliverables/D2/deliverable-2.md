@@ -17,4 +17,6 @@ This group is responsible for making sure the developer experience is smooth. We
 
 <ins>Map Visualization Group<ins/>
 
+This group is responsible for creating updated country maps for regions that have been omitted from the current Apache Superset version (apache-superset 3.0.0). We are using geo.json files as the basis to draw our country maps. This group is also responsible for creating and integrating databases that are tailored to specific country map regions, so that users can visualize different types of data across different regions for each country. 
+
 <ins>Map Features Group<ins/>

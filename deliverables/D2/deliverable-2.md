@@ -20,3 +20,5 @@ This group is responsible for making sure the developer experience is smooth. We
 This group is responsible for creating updated country maps for regions that have been omitted from the current Apache Superset version (apache-superset 3.0.0). We are using geo.json files as the basis to draw our country maps. This group is also responsible for creating and integrating databases that are tailored to specific country map regions, so that users can visualize different types of data across different regions for each country. 
 
 <ins>Map Features Group<ins/>
+
+This group is responsible for improving the usability of geographical visualizations of data by developing new types of visualization plugins. This allows the users to take inferences from data over a geographical area faster and better, while keeping it as convenient as possible. Our plugin ideas include the ability to overlap two or more datasets over a geographical map at the same time by using distinct colors and letting the use control the transparencies of the data's visualization. We initially start by the basic ability to see data at an absolute specific point on the map.

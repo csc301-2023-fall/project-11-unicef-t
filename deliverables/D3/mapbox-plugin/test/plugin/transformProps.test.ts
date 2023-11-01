@@ -19,7 +19,7 @@
 import { ChartProps, supersetTheme } from '@superset-ui/core';
 import transformProps from '../../src/plugin/transformProps';
 
-describe('UnicefMapboxPlugin transformProps', () => {
+describe('MapboxPlugin transformProps', () => {
   const formData = {
     colorScheme: 'bnbColors',
     datasource: '3__table',

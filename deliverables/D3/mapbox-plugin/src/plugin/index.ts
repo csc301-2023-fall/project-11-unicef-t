@@ -22,7 +22,7 @@ import controlPanel from './controlPanel';
 import transformProps from './transformProps';
 import thumbnail from '../images/thumbnail.png';
 
-export default class UnicefMapboxPlugin extends ChartPlugin {
+export default class MapboxPlugin extends ChartPlugin {
   /**
    * The constructor is used to pass relevant metadata and callbacks that get
    * registered in respective registries that are used throughout the library
@@ -35,15 +35,15 @@ export default class UnicefMapboxPlugin extends ChartPlugin {
    */
   constructor() {
     const metadata = new ChartMetadata({
-      description: 'Unicef Mapbox Plugin',
-      name: t('unicefMapbox'),
+      description: 'A Mapbox Plugin',
+      name: t('Mapbox Plugin'),
       thumbnail,
     });
 
     super({
       buildQuery,
       controlPanel,
-      loadChart: () => import('../UnicefMapboxPlugin'),
+      loadChart: () => import('../MapboxPlugin'),
       metadata,
       transformProps,
     });

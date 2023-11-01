@@ -52,7 +52,10 @@ export default function transformProps(chartProps: ChartProps) {
   const { boldText, headerFontSize, headerText } = formData;
   const data = queriesData[0].data as TimeseriesDataRecord[];
 
+  console.log('queriesData via TransformProps.ts', queriesData);
   console.log('formData via TransformProps.ts', formData);
+  console.log('chartProps via TransformProps.ts', chartProps);
+  const country = formData.selectCountry; 
 
   return {
     width,
@@ -62,5 +65,7 @@ export default function transformProps(chartProps: ChartProps) {
     boldText,
     headerFontSize,
     headerText,
+    country,
+
   };
 }

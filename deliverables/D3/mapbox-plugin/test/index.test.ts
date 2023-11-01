@@ -16,29 +16,18 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import {
-  QueryFormData,
-  supersetTheme,
-  TimeseriesDataRecord,
-} from '@superset-ui/core';
+import { MapboxPlugin } from '../src';
 
-export interface UnicefMapboxPluginStylesProps {
-  height: number;
-  width: number;
-  headerFontSize: keyof typeof supersetTheme.typography.sizes;
-  boldText: boolean;
-}
-
-interface UnicefMapboxPluginCustomizeProps {
-  headerText: string;
-}
-
-export type UnicefMapboxPluginQueryFormData = QueryFormData &
-  UnicefMapboxPluginStylesProps &
-  UnicefMapboxPluginCustomizeProps;
-
-export type UnicefMapboxPluginProps = UnicefMapboxPluginStylesProps &
-  UnicefMapboxPluginCustomizeProps & {
-    data: TimeseriesDataRecord[];
-    // add typing here for the props you pass in from transformProps.ts!
-  };
+/**
+ * The example tests in this file act as a starting point, and
+ * we encourage you to build more. These tests check that the
+ * plugin loads properly, and focus on `transformProps`
+ * to ake sure that data, controls, and props are all
+ * treated correctly (e.g. formData from plugin controls
+ * properly transform the data and/or any resulting props).
+ */
+describe('mapbox-plugin', () => {
+  it('exists', () => {
+    expect(MapboxPlugin).toBeDefined();
+  });
+});

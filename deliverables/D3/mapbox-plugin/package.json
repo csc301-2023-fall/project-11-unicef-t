@@ -1,7 +1,7 @@
 {
-  "name": "unicef-mapbox-plugin",
+  "name": "mapbox-plugin",
   "version": "0.1.0",
-  "description": "Unicef Mapbox Plugin",
+  "description": "A Mapbox Plugin",
   "sideEffects": false,
   "main": "lib/index.js",
   "module": "esm/index.js",
@@ -27,6 +27,7 @@
     "access": "public"
   },
   "dependencies": {
+    "d3": "^7.8.5",
     "mapbox-gl": "^2.15.0"
   },
   "peerDependencies": {

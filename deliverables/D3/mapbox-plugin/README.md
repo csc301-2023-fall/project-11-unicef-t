@@ -55,7 +55,7 @@ import { MapboxPlugin } from 'mapbox-plugin';
 
 to import the plugin and later add the following to the array that's passed to the `plugins` property:
 ```js
-new MapboxPlugin().configure({ key: 'mapbox-plugin' }),
+new MapboxPlugin().configure({ key: 'ext-newmapbox' }),
 ```
 
 After that the plugin should show up when you run Superset, e.g. the development server:

@@ -19,7 +19,7 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "echo CircleCI properly configured on github."
+          command: "echo CircleCI properly configured on github!"
 
 #This is the job to check that all jest tests have passed.
 #NOW REPLACED WITH ORB NODE/TEST in workflow

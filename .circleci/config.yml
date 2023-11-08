@@ -3,7 +3,7 @@
 version: 2.1
 
 general:
-  build_dir: deliverables/D3
+  build_dir: deliverables/D3/unicef-mapbox-plugin
 
 orbs:
   node: circleci/node@5.1.0

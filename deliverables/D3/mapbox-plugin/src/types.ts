@@ -28,6 +28,7 @@ export interface MapboxPluginStylesProps {
   headerFontSize: keyof typeof supersetTheme.typography.sizes;
   boldText: boolean;
   country: string;
+  formData: Object;
 }
 
 interface MapboxPluginCustomizeProps {

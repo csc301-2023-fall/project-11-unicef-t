@@ -17,6 +17,13 @@
  * under the License.
  */
 import { t, validateNonEmpty } from '@superset-ui/core';
+import { FeatureFlag, isFeatureEnabled} from '@superset-ui/core';
+import {
+  columnChoices,
+  ControlPanelState,
+  sharedControls,
+} from '@superset-ui/chart-controls';
+
 import {
   ControlPanelConfig,
   D3_FORMAT_OPTIONS,
@@ -25,6 +32,30 @@ import {
   getStandardizedControls,
 } from '@superset-ui/chart-controls';
 import { countryOptions } from './countries';
+
+
+function filterNumericColumns(columns) {
+  console.log("??? filter is ", columns.filter(column => column.type=="NUMBER"));
+  return columns.filter(column => column.type=="NUMBER");
+}
+
+
+
+// choices: columnChoices(state.datasource)
+
+const allColumns = {
+  type: 'SelectControl',
+  default: null,
+  mapStateToProps: (state: ControlPanelState) => ({
+    choices: columnChoices(state.datasource).filter(column => {
+       return column.type === 'INTEGER' || column.type === 'FLOAT' || column.type === 'DOUBLE'; // Add more numeric types if needed
+    }),
+  }),
+};
+const columnsConfig = isFeatureEnabled(FeatureFlag.ENABLE_EXPLORE_DRAG_AND_DROP)
+  ? sharedControls.entity
+  : allColumns;
+
 
 const config: ControlPanelConfig = {
   controlPanelSections: [
@@ -46,53 +77,59 @@ const config: ControlPanelConfig = {
             },
           },
         ],
-        ['entity'],
-        ['metric'],
-        ['adhoc_filters'],
-      ],
-    },
-    {
-      label: t('Chart Options'),
-      expanded: true,
-      tabOverride: 'customize',
-      controlSetRows: [
         [
           {
-            name: 'number_format',
+            name: 'select_year',
             config: {
-              type: 'SelectControl',
-              freeForm: true,
-              label: t('Number format'),
-              renderTrigger: true,
-              default: 'SMART_NUMBER',
-              choices: D3_FORMAT_OPTIONS,
-              description: D3_FORMAT_DOCS,
+              ...columnsConfig,
+              label: t('Choose Year'),
+              description: t('What year?'),
+              validators: [validateNonEmpty],
             },
           },
         ],
-        ['linear_color_scheme'],
+        ['metric'],
+        ['secondary_metric'],
       ],
     },
   ],
   controlOverrides: {
-    entity: {
-      label: t('ISO 3166-2 Codes'),
-      description: t(
-        'Column containing ISO 3166-2 codes of region/province/department in your table.',
-      ),
-    },
     metric: {
-      label: t('Metric'),
-      description: t('Metric to display bottom title'),
+      label: t('Metric Year'),
+      mapStateToProps: state => {
+        const { datasource } = state;
+        console.log('!!! controlpanel metric year datasource', datasource);
+        return {
+          columns: datasource ? datasource.columns : [],
+          savedMetrics: datasource ? datasource.metrics : [],
+          datasource,
+        };
+      },
+      description: t('Display Metric Year Data'),
     },
-    linear_color_scheme: {
-      renderTrigger: false,
+
+    secondary_metric: {
+      label: t('Metric ISO Codes'),
+      mapStateToProps: state => {
+        const { datasource } = state;
+        console.log('!!! controlpanel secondary metric datasource', datasource);
+        return {
+          columns: datasource ? datasource.columns : [],
+          savedMetrics: datasource ? datasource.metrics : [],
+          datasource,
+        };
+      },
+      description: t('Display Metric DEPT_ID'),
     },
+
+
+
   },
+
   formDataOverrides: formData => ({
     ...formData,
-    entity: getStandardizedControls().shiftColumn(),
     metric: getStandardizedControls().shiftMetric(),
+    secondary_metric: getStandardizedControls().shiftMetric(),
   }),
 };
 

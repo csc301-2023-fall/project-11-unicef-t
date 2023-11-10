@@ -24,36 +24,6 @@ import countries, { countryOptions } from './countries';
 import mapboxgl from 'mapbox-gl';
 import d3 from 'd3';
 
-// The following Styles component is a <div> element, which has been styled using Emotion
-// For docs, visit https://emotion.sh/docs/styled
-
-// Theming variables are provided for your use via a ThemeProvider
-// imported from @superset-ui/core. For variables available, please visit
-// https://github.com/apache-superset/superset-ui/blob/master/packages/superset-ui-core/src/style/index.ts
-
-// const Styles = styled.div<MapboxPluginStylesProps>`
-//   background-color: ${({ theme }) => theme.colors.secondary.light2};
-//   padding: ${({ theme }) => theme.gridUnit * 4}px;
-//   border-radius: ${({ theme }) => theme.gridUnit * 2}px;
-//   height: ${({ height }) => height}px;
-//   width: ${({ width }) => width}px;
-
-//   h3 {
-//     /* You can use your props to control CSS! */
-//     margin-top: 0;
-//     margin-bottom: ${({ theme }) => theme.gridUnit * 3}px;
-//     font-size: ${({ theme, headerFontSize }) =>
-//       theme.typography.sizes[headerFontSize]}px;
-//     font-weight: ${({ theme, boldText }) =>
-//       theme.typography.weights[boldText ? 'bold' : 'normal']};
-//   }
-
-//   pre {
-//     height: ${({ theme, headerFontSize, height }) =>
-//       height - theme.gridUnit * 12 - theme.typography.sizes[headerFontSize]}px;
-//   }
-// `;
-
 /**
  * ******************* WHAT YOU CAN BUILD HERE *******************
  *  In essence, a chart is given a few key ingredients to work with:
@@ -62,55 +32,45 @@ import d3 from 'd3';
  *  * FormData (your controls!) provided as props by transformProps.ts
  */
 
-// function MapboxPlugin(props: MapboxPluginProps) {
-  // height and width are the height and width of the DOM element as it exists in the dashboard.
-  // There is also a `data` prop, which is, of course, your DATA 🎉
-  // const { data, height, width } = props;
 
-  // const rootElem = createRef<HTMLDivElement>();
-
-  // // Often, you just want to access the DOM and do whatever you want.
-  // // Here, you can do that with createRef, and the useEffect hook.
-  // useEffect(() => {
-  //   const root = rootElem.current as HTMLElement;
-  //   console.log('Plugin element', root);
-  // });
-
-  // console.log('Plugin props', props);
-
-  // return (
-  //   <Styles
-  //     ref={rootElem}
-  //     boldText={props.boldText}
-  //     headerFontSize={props.headerFontSize}
-  //     height={height}
-  //     width={width}
-  //   >
-  //     <h3>{props.headerText}</h3>
-  //     <pre>${JSON.stringify(data, null, 2)}</pre>
-  //   </Styles>
-  // );
-// }
-
-// export default MapboxPlugin;
-
-  
 mapboxgl.accessToken = 'pk.eyJ1IjoibmJhbGVldGEiLCJhIjoiY2xqY3AzNzJrMmpjbDNrcXp0dG5yMGMyOSJ9.55GXHudxYu9ASXD4XC3USg';
-
-// import ReactComponent from './MapboxMap';
 
 
 const MapboxPlugin = (props: MapboxPluginProps) => {
-  const { data, height, width, country } = props;
+  const { data, height, width, country, formData } = props;
 
   console.log('props are:', props);
   console.log('data is ', data);
-  const a = JSON.stringify(data, null, 2);
-  console.log('transformed data is ', a);
+  var NEW_DATA = {};
+  
+  //PARSE data
+  for(let i =0; i<data.length; i++){
+    const all_values = Object.values(data[i]);
+    const iso_values = all_values[0];
+    NEW_DATA[all_values[1]] = iso_values;
+  }
+  console.log('new_data is ', NEW_DATA);
+  
+  //This code changes dataset values relatively so that the map create a better display
+  const cleanedData = NEW_DATA;
+  const min_value = Math.min(...Object.values(cleanedData));
+  const rounded_min_value = Math.pow(10, Math.floor(Math.log10(min_value)));
+  const factor = 100000 / rounded_min_value;
+  console.log('factor ', factor);
+  
+  console.log('cleanedData is ', cleanedData);
+
+  // //Clean dataset. connection issues may cause NAN values. Add this code if you have connection problems.
+
+  // const cleanedData = Object.keys(cleanedData).reduce((result, key) => {
+  //   if (!isNaN(NEW_DATA[key])) {
+  //     result[key] = NEW_DATA[key];
+  //   }
+  //   return result;
+  // }, {});
+
+
   console.log('country is', country);
-  console.log('prop country is', props.country);
-
-
   const jsonFile = countries[country];
   console.log('jsonFile', jsonFile);
   
@@ -131,17 +91,27 @@ const MapboxPlugin = (props: MapboxPluginProps) => {
       
     map.on('load', async() => {
       const response = await fetch(jsonFile);
-      const data = await response.json();
-      console.log("GeoJson Data is ", data);
-      const length = data.features[0].geometry.coordinates[0].length;
-      const first_coord = data.features[0].geometry.coordinates[0][0];
-      const last_coord = data.features[0].geometry.coordinates[0][length-1];
+      const geodata = await response.json();
+      console.log("GeoJson Data is ", geodata);
+      const length = geodata.features[0].geometry.coordinates[0].length;
+      const first_coord = geodata.features[0].geometry.coordinates[0][0];
+      const last_coord = geodata.features[0].geometry.coordinates[0][length-1];
       const centre_coord = [(first_coord[0]+last_coord[0])/2,(first_coord[1]+last_coord[1])/2];
-      console.log("Centre is ", centre_coord);
+
+      var mapdata = geodata;
+
+
+      for (let i=0; i<mapdata.features.length; i++){
+          const ISO_code = mapdata.features[i].properties.ISO;
+          const population_value = cleanedData[ISO_code];
+          mapdata.features[i].properties.population = population_value*factor;
+      }
+      console.log("Mapdata is ", mapdata)
+
 
       map.addSource('rwanda-provinces', {
         'type': 'geojson',
-        'data': countries[country],
+        'data': mapdata,
       });
       map.flyTo({
           center: centre_coord //[30.0242, -1.9576]

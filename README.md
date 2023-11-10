@@ -48,7 +48,7 @@ Note that while Apache Superset is composing, there may be a warning that displa
 ```
 It is fine to ignore it, but if you want to remove the warning, follow the instruction [HERE](https://superset.apache.org/docs/installation/configuring-superset/) to configure Apache Superset.
 
-Since Apache Superset is extremely tedious to set up either way, we have provided a `start_up` video under /deliverables/D3 explaining the deployment & use of our work. In the `start_up` video, you can learn how to launch Apache Superset using Docker after the inital Apache Superset Installation. 
+Since Apache Superset is extremely tedious to set up either way, we have provided a `start_up` video under `/deliverables/D3` explaining the deployment & use of our work. In the `start_up` video, you can learn how to launch Apache Superset using Docker after the inital Apache Superset Installation. 
 
 
  

@@ -1,15 +1,11 @@
 
-# Your Team Number and Name
-
- > _Note:_ This document is meant to be written during (or shortly after) your review meeting, which should happen fairly close to the due date.      
- >      
- > _Suggestion:_ Have your review meeting a day or two before the due date. This way you will have some time to go over (and edit) this document, and all team members should have a chance to make their contribution.
+# Apache Superset/The Innovators Alliance
 
 
 ## Iteration XX - Review & Retrospect
 
- * When: FILL IN THE DATE WHEN YOU ACTUALLY HAD YOUR REVIEW MEETING
- * Where: PHYSICAL LOCATION AND/OR ONLINE
+ * When: 10 Nov 2023
+ * Where: BAHEN 2230 + Online
 
 ## Process - Reflection
 
@@ -17,7 +13,6 @@
 #### Q1. What worked well
 
 List **process-related** (i.e. team organization and how you work) decisions and actions that worked well.
-
 
  * 2 - 4 important decisions, processes, actions, or anything else that worked well for you, ordered from most to least important.
  * Give a supporting argument about what makes you think that way.
@@ -47,9 +42,22 @@ Briefly explain how you integrated the previously developed individuals componen
 ## Product - Review
 
 #### Q4. How was your product demo?
- * How did you prepare your demo?
- * What did you manage to demo to your partner?
+* How did you prepare your demo?
+
+  We prepared our demo by recording a video showcasing how to launch and deploy Apache Superset and the functionalities of the plugin we created.
+
+* What did you manage to demo to your partner?
+  
+   We showcased the main functionalities of the plugin we created to our partner, i.e setting up and creating the database, processing and creating datasets and detailed map visualizations of the datasets using MapBox of each country region.
+
  * Did your partner accept the features? And were there change requests?
+   
+   Our Partner accepted the features. They requested to modify in-built options for the control panel instead of creating our own control panel for our plugin.
+   
  * What were your learnings through this process? This can be either from a process and/or product perspective.
- * *This section will be marked very leniently so keep it brief and just make sure the points are addressed*
+
+   I learnt that sometimes the customer does not know what they want or what they want to change until they see the deployed product. For example, our partner requested us to modify the control panel instead of creating our own even though they did not mention it during the meetings.
+
+
+
 

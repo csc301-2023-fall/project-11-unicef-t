@@ -7,9 +7,11 @@ UNICEF works in the world’s toughest places to reach the most disadvantaged ch
 The organization is also the largest provide of vaccines, nutrition, safe water and sanitation, quality education, etc.
 
 ## Description about the project
-The application is a plug-in for Superset that helps with data navigation, manipulation, and visualization.
+Apache Superset is a modern, enterprise-ready business intelligence web application. It is fast, lightweight, intuitive, and loaded with options that make it easy for users of all skill sets to explore and visualize their data, from simple pie charts to highly detailed deck.gl geospatial charts.
 
-The problem with the existing plug-in is that it has limited functionalities and scope, and uses deprecated codes. 
+Currently, the problem about Apache Superset is that the existing plug-in is that it has limited functionalities and scope, and uses deprecated codes. 
+
+The application is a plug-in for Superset that helps with data navigation, manipulation, and visualization. The aim of this application is to expand on the visualizations and provide a clearer view of any demographic data, enhance the distinction between countries and their boundaries, and offer more options to analyze the data.
 ​
 ## Key Features
 
@@ -17,24 +19,17 @@ The problem with the existing plug-in is that it has limited functionalities and
  * Users will be able to propose population estimates for a selected region, and others can review the said proposal.
 ​
 ## Instructions
-This section will be updated as the project progresses.
- 
- ## Development requirements
-To set up for the plug-in, you would need to have the following in your system:
- * apache-superset 3.0.0
- * python 3.9.7 and above
 
-### Set-up & Deployment
-The user can connect to the database and interact with the data using Apache Superset.
+To use our plug-in, you need to download and set up Apache Superset on your computer.
 
 There are two main ways to install Apache Superset: composing on Docker Desktop, or setting it up from scratch.
 
-[Here is a detailed instruction on installing Apache Superset using Docker Desktop.](https://superset.apache.org/docs/installation/installing-superset-using-docker-compose/)
+[Here is a detailed instruction on installing Apache Superset using Docker Desktop.](https://superset.apache.org/docs/installation/installing-superset-using-docker-compose/) If you are using this method in Windows, you will need to install a Windows Subsystem for Linux (WSL) as Windows is not officially supported by Apache Superset. [HERE](https://learn.microsoft.com/en-us/windows/wsl/install) is a detailed instruction on how to set up WSL.
 
 [Here is a detailed instruction on installing Apache Superset from scratch.](https://superset.apache.org/docs/installation/installing-superset-from-scratch)
 
 
-Note that while Apache Superset is composing, there may be a warning that displays:
+Note that while initialize Apache Superset, there may be a warning that displays the following message:
 
 ```
  --------------------------------------------------------------------------------
@@ -48,9 +43,18 @@ Note that while Apache Superset is composing, there may be a warning that displa
 ```
 It is fine to ignore it, but if you want to remove the warning, follow the instruction [HERE](https://superset.apache.org/docs/installation/configuring-superset/) to configure Apache Superset.
 
-Since Apache Superset is extremely tedious to set up either way, we have provided a `start_up` video under `/deliverables/D3` explaining the deployment & use of our work. In the `start_up` video, you can learn how to launch Apache Superset using Docker after the inital Apache Superset Installation. 
+Since Apache Superset is extremely tedious to set up either way, we have provided a `start_up` video under `/deliverables/D3` explaining how to launch Apache Superset using Docker after the inital Apache Superset Installation. 
 
+To use our plug-in on Apache Superset, you can download our `mapbox-plugin` folder from this repository into your local machine. You can put the `mapbox-plugin` folder anywhere in your machine **EXCEPT** in the `superset/superset-frontend/plugins` folder. Else it will cause an error and the plug-in will fail to execute.
 
+We have also provided a video titled `plugin_demo` under `/deliverables/D3` that demonstrates how to use our plug-in using some example data. All datasets can be found in `mapbox-plugin/src/datasets`.
+ 
+ ## Development requirements
+To set up for the plug-in, you would need to have the following in your system:
+ * apache-superset 3.0.0
+ * python 3.9.7 and above
+ * node version 16
+ * npm version 7 or 8
  
  ## Deployment and Github Workflow
  For each function/feature, each team member will create a separate branch for the part that he/she is working on. After completing the work, the team member will submit a pull request to merge their work from their 

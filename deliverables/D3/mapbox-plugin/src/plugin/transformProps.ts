@@ -55,10 +55,12 @@ export default function transformProps(chartProps: ChartProps) {
   console.log('queriesData via TransformProps.ts', queriesData);
   console.log('formData via TransformProps.ts', formData);
   console.log('chartProps via TransformProps.ts', chartProps);
+  
   const country = formData.selectCountry; 
+  const year = formData.selectYear; 
 
   return {
-    width,
+    width,  
     height,
     data,
     // and now your control data, manipulated as needed, and passed through as props!
@@ -66,6 +68,9 @@ export default function transformProps(chartProps: ChartProps) {
     headerFontSize,
     headerText,
     country,
+    year,
+    formData,
+    queriesData,
 
   };
 }

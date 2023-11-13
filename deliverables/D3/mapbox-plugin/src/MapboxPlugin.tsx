@@ -20,7 +20,8 @@ import React, { useEffect, createRef } from 'react';
 import { styled } from '@superset-ui/core';
 import { reactify,  } from '@superset-ui/core';
 import { MapboxPluginProps, MapboxPluginStylesProps } from './types';
-import countries, { countryOptions } from './countries';
+//import countries, { countryOptions } from './countries';
+import countries, { countryOptions } from './plugin/countries';
 import mapboxgl from 'mapbox-gl';
 import d3 from 'd3';
 
@@ -37,7 +38,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibmJhbGVldGEiLCJhIjoiY2xqY3AzNzJrMmpjbDNrcXp0d
 
 
 const MapboxPlugin = (props: MapboxPluginProps) => {
-  const { data, height, width, country, formData } = props;
+  // const { data, height, width, country, formData } = props;
+  const { data, height, width, country } = props;
 
   console.log('props are:', props);
   console.log('data is ', data);

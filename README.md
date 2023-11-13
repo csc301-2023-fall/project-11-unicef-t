@@ -26,7 +26,7 @@ There are two main ways to install Apache Superset: composing on Docker Desktop,
 
 [Here is a detailed instruction on installing Apache Superset using Docker Desktop.](https://superset.apache.org/docs/installation/installing-superset-using-docker-compose/) If you are using this method in Windows, you will need to install a Windows Subsystem for Linux (WSL) as Windows is not officially supported by Apache Superset. [HERE](https://learn.microsoft.com/en-us/windows/wsl/install) is a detailed instruction on how to set up WSL.
 
-It is important to use Docker Desktop from a Linux distribution running on WSL rather than using Docker Desktop on Windows using WSL, because of changes in WSL 2 affecting Docker's compatibility. This is infact a new and recent issue, and following links discuss it: [similar problem and solution](https://github.com/microsoft/WSL/issues/9360) but docker VHD is not accesible thus solution not implementable, [new source 1](https://github.com/microsoft/WSL/issues/10656), [new source 2](https://stackoverflow.com/questions/77277205/docker-desktop-engine-just-stops-as-soon-as-we-try-to-start-it-up-fail-dd00).
+It is important to use Docker Desktop from a Linux distribution running on WSL rather than using Docker Desktop on Windows using WSL, because of changes in WSL 2 affecting Docker's compatibility. This is infact a new and recent issue, and following links discuss it: [similar problem and solution](https://github.com/microsoft/WSL/issues/9360) but docker VHD is not accesible thus solution not implementable, [recent GitHub post](https://github.com/microsoft/WSL/issues/10656) questioning the same, [very recent StackOverflow post](https://stackoverflow.com/questions/77277205/docker-desktop-engine-just-stops-as-soon-as-we-try-to-start-it-up-fail-dd00).
 
 [Here is a detailed instruction on installing Apache Superset from scratch.](https://superset.apache.org/docs/installation/installing-superset-from-scratch)
 
@@ -43,7 +43,7 @@ Note that while initialize Apache Superset, there may be a warning that displays
  --------------------------------------------------------------------------------
  --------------------------------------------------------------------------------
 ```
-It is fine to ignore it, but if you want to remove the warning, follow the instruction [HERE](https://superset.apache.org/docs/installation/configuring-superset/) to configure Apache Superset. It is also safe to ignore superset_node warnings when around the time it finishes building.
+It is fine to ignore it, but if you want to remove the warning, follow the instruction [HERE](https://superset.apache.org/docs/installation/configuring-superset/) to configure Apache Superset. It is also safe to ignore `superset_node` warnings around the time the subprocess finishes plugin building.
 
 Since Apache Superset is extremely tedious to set up either way, we have provided a `start_up` video under `/deliverables/D3` explaining how to launch Apache Superset using Docker after the inital Apache Superset Installation. 
 

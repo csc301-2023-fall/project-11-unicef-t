@@ -25,22 +25,26 @@ import {
 export interface MapboxPluginStylesProps {
   height: number;
   width: number;
-  headerFontSize: keyof typeof supersetTheme.typography.sizes;
-  boldText: boolean;
-  country: string;
-  formData: Object;
+  // headerFontSize: keyof typeof supersetTheme.typography.sizes;
+  // boldText: boolean;
+  // country: string;
+  // formData: Object;
 }
 
-interface MapboxPluginCustomizeProps {
-  headerText: string;
-}
+// interface MapboxPluginCustomizeProps {
+//   headerText: string;
+// }
 
 export type MapboxPluginQueryFormData = QueryFormData &
-  MapboxPluginStylesProps &
-  MapboxPluginCustomizeProps;
+  MapboxPluginStylesProps;
+  //MapboxPluginStylesProps &
+  //MapboxPluginCustomizeProps;
 
 export type MapboxPluginProps = MapboxPluginStylesProps &
-  MapboxPluginCustomizeProps & {
+  //MapboxPluginCustomizeProps & {
+  {
     data: TimeseriesDataRecord[];
     // add typing here for the props you pass in from transformProps.ts!
+    country: string,
+    year: number,
   };

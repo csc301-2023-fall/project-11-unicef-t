@@ -9,14 +9,15 @@ The organization is also the largest provide of vaccines, nutrition, safe water 
 ## Description about the project
 Apache Superset is a modern, enterprise-ready business intelligence web application. It is fast, lightweight, intuitive, and loaded with options that make it easy for users of all skill sets to explore and visualize their data, from simple pie charts to highly detailed deck.gl geospatial charts.
 
-Currently, the problem about Apache Superset is that the existing plug-in is that it has limited functionalities and scope, and uses deprecated codes. 
+Currently, the problem about Apache Superset is that the existing plug-in is that it has limited functionalities and scope, and uses deprecated codes. Furthermore, the current country map plugin can only view one country and not the specific areas around that country. 
 
-The application is a plug-in for Superset that helps with data navigation, manipulation, and visualization. The aim of this application is to expand on the visualizations and provide a clearer view of any demographic data, enhance the distinction between countries and their boundaries, and offer more options to analyze the data.
+The application is a plug-in for Superset that helps with data navigation, manipulation, and visualization. The aim of this application is to expand on the visualizations and provide a clearer view of any demographic data, enhance the distinction between countries and their boundaries, and offer more options to analyze the data. We decided to use mapbox-gl as the map visualization of our choice, as it is able to clearly display our selected country as well as the geographic borders of surrounding countries and areas. 
 ​
 ## Key Features
 
  * Users will get different dimensions on the map. Specifically, they will get map visualizations beyond a chloropath.
  * Users will be able to propose population estimates for a selected region, and others can review the said proposal.
+ * Users will be able to view heatmap of whatever dataset for the regions of selected country.
 ​
 ## Instructions
 
@@ -75,7 +76,6 @@ npm i -S 'path to your mapbox-plugin folder'
 npm run dev
 ```
 
-
 We have also provided a video titled `plugin_demo` under `/deliverables/D3` that demonstrates how to use our plug-in using some example data. All datasets can be found in `mapbox-plugin/src/datasets`.
  
  ## Development requirements
@@ -86,11 +86,9 @@ To set up for the plug-in, you would need to have the following in your system:
  * npm version 7 or 8
  
  ## Deployment and Github Workflow
- For each function/feature, each team member will create a separate branch for the part that he/she is working on. After completing the work, the team member will submit a pull request to merge their work from their 
- branch into main. The code must be reviewed by the code owner and needs to be approved by at least one other team member, if there are no issues or merge conflicts, the pull request can then be merged into main and 
- closed.
+For each function/feature, each team member will create a separate branch for the part that he/she is working on. After completing the work, the team member will submit a pull request to merge their work from their branch into main. The code must be reviewed by the code owner and needs to be approved by at least one other team member, if there are no issues or merge conflicts, the pull request can then be merged into main and closed.
 
- We choose this worklow because we want to protect the main branch so that all of the features work nicely with each other, as well as enforcing vigorous review and reinforcement of codes to prevent bugs.
+We choose this worklow because we want to protect the main branch so that all of the features work nicely with each other, as well as enforcing vigorous review and reinforcement of codes to prevent bugs.
 
  ## Coding Standards and Guidelines
  We will enforce the following coding standards:

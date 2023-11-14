@@ -51,7 +51,7 @@ Setup: In the `mapbox-plugin` folder, run
 ```
 npm install
 ```
-Then in the node_modules folder, run
+Then in the `node_modules` folder, run
 
 ```
 npm install mapbox-gl

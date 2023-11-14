@@ -45,7 +45,36 @@ It is fine to ignore it, but if you want to remove the warning, follow the instr
 
 Since Apache Superset is extremely tedious to set up either way, we have provided a `start_up` video under `/deliverables/D3` explaining how to launch Apache Superset using Docker after the inital Apache Superset Installation. 
 
-To use our plug-in on Apache Superset, you can download our `mapbox-plugin` folder from this repository into your local machine. You can put the `mapbox-plugin` folder anywhere in your machine **EXCEPT** in the `superset/superset-frontend/plugins` folder. Else it will cause an error and the plug-in will fail to execute.
+To use our plug-in on Apache Superset, you can download our `mapbox-plugin` folder from this repository into your local machine. You can put the `mapbox-plugin` folder anywhere in your machine **EXCEPT** in the `superset/superset-frontend/plugins` folder. Else it will cause an error and the plug-in will fail to execute. For more detailed instructions you can follow these steps:
+
+Setup: In the `mapbox-plugin` folder, run 
+```
+npm install
+```
+Then in the node_modules folder, run
+
+```
+npm install mapbox-gl
+```
+Then go to `node_modules\mapbox-gl` and run
+
+```
+npm install
+```
+Then in the `mapbox-plugin` folder, run
+
+```
+npm i --force
+npm run build
+```
+
+Next go to your apache superset folder and run the following commands in the `superset-frontend` folder
+
+```
+npm i -S 'path to your mapbox-plugin folder'
+npm run dev
+```
+
 
 We have also provided a video titled `plugin_demo` under `/deliverables/D3` that demonstrates how to use our plug-in using some example data. All datasets can be found in `mapbox-plugin/src/datasets`.
  

@@ -30,7 +30,7 @@ There are two main ways to install Apache Superset: composing on Docker Desktop,
 [Here is a detailed instruction on installing Apache Superset from scratch.](https://superset.apache.org/docs/installation/installing-superset-from-scratch)
 
 
-Note that while initialize Apache Superset, there may be a warning that displays the following message:
+Note that while Apache Superset is initializing, there may be a warning that displays the following message:
 
 ```
  --------------------------------------------------------------------------------
@@ -81,7 +81,7 @@ We have also provided a video titled `plugin_demo` under `/deliverables/D3` that
  ## Development requirements
 To set up for the plug-in, you would need to have the following in your system:
  * apache-superset 3.0.0
- * python 3.9.7 and above
+ * python 3.9.7 or above
  * node version 16
  * npm version 7 or 8
  

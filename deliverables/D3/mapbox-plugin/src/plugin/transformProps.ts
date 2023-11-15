@@ -69,7 +69,7 @@ export default function transformProps(chartProps: ChartProps) {
     // headerText,
     country,
     year,
-    // formData,
+    formData,
     // queriesData,
 
   };

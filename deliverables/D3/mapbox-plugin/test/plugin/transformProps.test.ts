@@ -47,6 +47,10 @@ describe('MapboxPlugin transformProps', () => {
       ],
       country: 'Egypt',
       year: 2007,
+      formData = {
+        selectCountry: 'Egypt',
+        selectYear: 2007,
+      },
     });
   });
 });

@@ -12,8 +12,6 @@
 
 #### Q1. What worked well
 
-List **process-related** (i.e. team organization and how you work) decisions and actions that worked well.
-
 1) Agile Methodology Implementation: Thinking about the project as a whole is a daunting task, so breaking up the project into smaller parts using an agile approach has helped us move quicker and with less collisions between teammates' PRs.
 
 2) Cross-Functional Teams: This was helpful so we could have different people who were more knowledgeable on different sections of the code. Recombing the code after D2 was a bit tedious, but was worth the specific knowledge gained by everyone.
@@ -22,8 +20,6 @@ List **process-related** (i.e. team organization and how you work) decisions and
 
 
 #### Q2. What did not work well
-
-List **process-related** (i.e. team organization and how you work) decisions and actions that did not work well.
 
 **1) Configuring & Setting up Apache Superset:**
 
@@ -35,9 +31,6 @@ Due to the inherent design and configuration of Apache Superset, we face many li
 
 #### Q3(a). Planned changes
 
-List any **process-related** (i.e. team organization and/or how you work) changes you are planning to make (if there are any)
-
- * Ordered from most to least important, with supporting argument explaining a change.
 1) Stay in better communication with the engineers from Unicef. The Unicef engineers have way more experience with Superset than we do, and they probably will have already faced all the issues we come across.
 
 2) Make sure no one is having developer related issues. This would allow for faster implementation and a more smooth workflow.
@@ -45,7 +38,6 @@ List any **process-related** (i.e. team organization and/or how you work) change
 3) Meet in person more often. We only meet in person once a week right now and because of busy schedules, we usually don't have enough time to get everything we want done in that one meeting.
 
 #### Q3(b). Integration & Next steps
-Briefly explain how you integrated the previously developed individuals components as one product (i.e. How did you be combine the code from 3 sub-repos previously created) and if/how the assignment was helpful or not helpful.
 
  * It felt tedious to combine all 3 sub-repos together into the main repo. The way we did it was first adding the part of the project from sub-repo 2 (the data and the manipulation of data) into the main repo. Then we had to add the other sub-repos semi-manually. We believe it would’ve been more beneficial and more efficient to just stay with the one main repo and not separate into 3.
 
@@ -67,4 +59,4 @@ Briefly explain how you integrated the previously developed individuals componen
    
  * What were your learnings through this process? This can be either from a process and/or product perspective.
 
-   I learnt that sometimes the customer does not know what they want or what they want to change until they see the deployed product. For example, our partner requested us to modify the existing control panel instead of creating our own even though they did not mention it during any of the previous meetings.
+   We learnt that sometimes the customer does not know what they want or what they want to change until they see the deployed product. For example, our partner requested us to modify the existing control panel instead of creating our own even though they did not mention it during any of the previous meetings.

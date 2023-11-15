@@ -88,7 +88,7 @@ To set up for the plug-in, you would need to have the following in your system:
  ## Deployment and Github Workflow
 For each function/feature, each team member will create a separate branch for the part that he/she is working on. After completing the work, the team member will submit a pull request to merge their work from their branch into main. The code must be reviewed by the code owner and needs to be approved by at least one other team member, if there are no issues or merge conflicts, the pull request can then be merged into main and closed.
 
-We choose this worklow because we want to protect the main branch so that all of the features work nicely with each other, as well as enforcing vigorous review and reinforcement of codes to prevent bugs.
+We choose this workflow because we want to protect the main branch so that all of the features work nicely with each other, as well as enforcing vigorous review and reinforcement of codes to prevent bugs.
 
  ## Coding Standards and Guidelines
  We will enforce the following coding standards:

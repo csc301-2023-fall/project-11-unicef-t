@@ -29,7 +29,7 @@ List **process-related** (i.e. team organization and how you work) decisions and
 
 A couple of our team members ( 2 ~ 3) are unable to set it up properly, strongly hindering with coding/testing on their local machines. This is because Apache Superset requires alot of memory and space, which some of our team members do not have the luxury of. From [Installing Locally Using Docker Compose | Superset (apache.org)](https://superset.apache.org/docs/installation/installing-superset-using-docker-compose/), it is recommended to have at least 8GB of RAM to the virtual machine as well as provisioning a hard drive of at least 40GB for it to run properly. Furthermore, even when installed properly, there are many errors and conflicts with the local machine settings, making it a daunting task to configure and run Apache Superset properly. Due to the difficulty in installation and set-up, the efficiency of our team is negatively affected as we can only work on a few computers. 
 
-**2) Mapbox plugin:**
+**2) Setting up the Mapbox plugin:**
  
 Due to the inherent design and configuration of Apache Superset, we face many limitations in terms of customization of our plugin. If the code does not fufill Apache Superset's architecture, the plugin will fail. Hence, we have limited functionality regarding the code we want to modify/add because of the inherent architecture of Apache Superset. One huge example of this is the data querying system in Apache Superset. We are unable to modify any options when choosing our metrics and have to rely solely pre-built options. This is an inherent issue with superset as shown here: https://github.com/apache/superset/issues/7172. Due to the various restrictions we encountered, there is limited flexibility on what we can do. 
 

@@ -62,7 +62,8 @@ Then go to `node_modules\mapbox-gl` and run
 ```
 npm install
 ```
-To build the plugin, run the following commands:
+
+To build the plugin, run the following commands:, navigate back to the 'mapbox-plugin` folder, and run the following commands:
 
 ```
 npm i --force

@@ -62,7 +62,7 @@ Then go to `node_modules\mapbox-gl` and run
 ```
 npm install
 ```
-Then in the `mapbox-plugin` folder, run
+Then in the `mapbox-plugin` folder, navigate back to the 'mapbox-plugin` folder, and run
 
 ```
 npm i --force

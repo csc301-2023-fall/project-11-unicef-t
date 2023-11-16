@@ -16,6 +16,7 @@ Alternatively, to run the plugin in development mode (=rebuilding whenever chang
 ```
 npm run dev
 ```
+Note that one may get errors from `npm run build`, but those errors do not affect the actual building of the plugin. `npm` is a large package manager, and thus it yields irrelevant errors when trying to build the plugin. In case of version conflict errors with other tools under `npm`, it is recommended to use the `--force` flag, again due to the nature of `npm`.
 
 To add the package to Superset, go to the `superset-frontend` subdirectory in your Superset source folder (assuming both the `mapbox-plugin` plugin and `superset` repos are in the same root directory) and run
 ```

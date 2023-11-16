@@ -62,17 +62,65 @@ Then go to `node_modules\mapbox-gl` and run
 ```
 npm install
 ```
-Then in the `mapbox-plugin` folder, navigate back to the 'mapbox-plugin` folder, and run
+
+To build the plugin, run the following commands:, navigate back to the 'mapbox-plugin` folder, and run the following commands:
 
 ```
 npm i --force
 npm run build
 ```
 
-Next go to your apache superset folder and run the following commands in the `superset-frontend` folder
+Alternatively, to run the plugin in development mode (=rebuilding whenever changes are made), start the dev server with the following command:
 
 ```
-npm i -S 'path to your mapbox-plugin folder'
+npm run dev
+```
+Note that one may get errors from `npm run build`, but those errors do not affect the actual building of the plugin. `npm` is a large package manager, and thus it yields irrelevant errors when trying to build the plugin. In case of version conflict errors with other tools under `npm`, it is recommended to use the `--force` flag, again due to the nature of `npm`.
+
+To add the package to Superset, go to the `superset-frontend` subdirectory in your Superset source folder (assuming both the `mapbox-plugin` plugin and `superset` repos are in the same root directory) and run
+```
+npm i -S ../../mapbox-plugin
+```
+
+If your Superset plugin exists in the `superset-frontend` directory and you wish to resolve TypeScript errors about `@superset-ui/core` not being resolved correctly, add the following to your `tsconfig.json` file:
+
+```
+"references": [
+  {
+    "path": "../../packages/superset-ui-chart-controls"
+  },
+  {
+    "path": "../../packages/superset-ui-core"
+  }
+]
+```
+
+You may also wish to add the following to the `include` array in `tsconfig.json` to make Superset types available to your plugin:
+
+```
+"../../types/**/*"
+```
+
+Finally, if you wish to ensure your plugin `tsconfig.json` is aligned with the root Superset project, you may add the following to your `tsconfig.json` file:
+
+```
+"extends": "../../tsconfig.json",
+```
+
+After this edit the `superset-frontend/src/visualizations/presets/MainPreset.js` and make the following changes:
+
+```js
+import { MapboxPlugin } from 'mapbox-plugin';
+```
+
+to import the plugin and later add the following to the array that's passed to the `plugins` property:
+```js
+new MapboxPlugin().configure({ key: 'ext-newmapbox' }),
+```
+
+After that the plugin should show up when you run Superset, e.g. the development server:
+
+```
 npm run dev
 ```
 

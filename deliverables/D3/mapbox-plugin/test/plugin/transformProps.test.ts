@@ -24,11 +24,13 @@ describe('MapboxPlugin transformProps', () => {
     colorScheme: 'bnbColors',
     datasource: '3__table',
     granularity_sqla: 'ds',
-    metric: 'sum__num',
+    metric: 'year',
     series: 'name',
     boldText: true,
     headerFontSize: 'xs',
-    headerText: 'my text',
+    headerText: 'header text',
+    selectCountry: 'Egypt',
+    selectYear: 2007,
   };
   const chartProps = new ChartProps({
     formData,
@@ -36,7 +38,10 @@ describe('MapboxPlugin transformProps', () => {
     height: 600,
     theme: supersetTheme,
     queriesData: [{
-      data: [{ name: 'Hulk', sum__num: 1 }],
+      data: [{ name: 'Name 1', number: 5, __timestamp: 599616000000 },
+        { name: 'Name 2', number: 10, __timestamp: 599617000000 },
+        { name: 'Name 3', number: 15, __timestamp: 599618000000 },
+      ],
     }],
   });
 
@@ -44,10 +49,25 @@ describe('MapboxPlugin transformProps', () => {
     expect(transformProps(chartProps)).toEqual({
       width: 800,
       height: 600,
+      data: [{ name: 'Name 1', number: 5, __timestamp: 599616000000 },
+        { name: 'Name 2', number: 10, __timestamp: 599617000000 },
+        { name: 'Name 3', number: 15, __timestamp: 599618000000 },
+      ],
       boldText: true,
       headerFontSize: 'xs',
       headerText: 'my text',
-      data: [{ name: 'Hulk', sum__num: 1 }],
+      country: 'Egypt',
+      year: 2007,
+      formData = {
+        selectCountry: 'Egypt',
+        selectYear: 2007,
+      },
+      queriesData: [{
+        data: [{ name: 'Name 1', number: 5, __timestamp: 599616000000 },
+          { name: 'Name 2', number: 10, __timestamp: 599617000000 },
+          { name: 'Name 3', number: 15, __timestamp: 599618000000 },
+        ],
+      }],
     });
   });
 });

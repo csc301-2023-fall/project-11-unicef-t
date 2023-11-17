@@ -19,7 +19,8 @@
     "prebuild": "rimraf {lib,esm,tsconfig.tsbuildinfo}",
     "postbuild": "npm run test",
     "ts-types": "tsc --build",
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint ."
   },
   "author": "My Name",
   "license": "Apache-2.0",
@@ -27,8 +28,16 @@
     "access": "public"
   },
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.11.0",
+    "@typescript-eslint/parser": "^6.11.0",
     "d3": "^7.8.5",
-    "mapbox-gl": "^2.15.0"
+    "eslint": "^8.53.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "mapbox-gl": "^2.15.0",
+    "prettier": "^3.1.0"
   },
   "peerDependencies": {
     "@airbnb/config-babel": "^2.0.1",

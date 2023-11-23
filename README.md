@@ -4,7 +4,7 @@
 Evan Wheeler, e.wheeler@unicef.org, chief technology officer at UNICEF's Global Innovation Centre.
 
 UNICEF works in the world’s toughest places to reach the most disadvantaged children and adolescents. 
-The organization is also the largest provide of vaccines, nutrition, safe water and sanitation, quality education, etc.
+The organization is also the largest provider of vaccines, nutrition, safe water and sanitation, quality education, etc.
 
 ## Description about the project
 Apache Superset is a modern, enterprise-ready business intelligence web application. It is fast, lightweight, intuitive, and loaded with options that make it easy for users of all skill sets to explore and visualize their data, from simple pie charts to highly detailed deck.gl geospatial charts.

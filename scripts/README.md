@@ -1,4 +1,4 @@
-<ins>Plugin Setup and Build scripts<ins/>
+# Plugin Setup and Build scripts
 
 Parth made the decision to automate the plugin creation since we all spent a very significant amount of time getting Superset to run for the first time, and we would not want our client to face such a problem. We achieved our goal to make the process of running and using our application as seamless as possible by making generalized & user-safe automating bash code, and keeping track of common problems when setting up Apache in development mode.
 

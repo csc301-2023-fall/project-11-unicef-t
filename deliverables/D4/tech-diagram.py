@@ -1,7 +1,11 @@
 from diagrams import Diagram
-from diagrams.aws.compute import EC2
-from diagrams.aws.database import RDS
+from diagrams.aws.compute import EC2, ECS
+from diagrams.aws.database import RDS, Aurora
 from diagrams.aws.network import ELB
+from diagrams.k8s.compute import ReplicaSet
+
 
 with Diagram("Diagram", show=False):
-    ELB("lb") >> EC2("web") >> RDS("userdb")
+    [ReplicaSet("Geojson Files") >> EC2("Data Processing"),
+        ECS("Superset Backend"),
+        ELB("Mapbpx API")] >> RDS("Mapbox Plugin") >> Aurora("Superset Frontend (React)")

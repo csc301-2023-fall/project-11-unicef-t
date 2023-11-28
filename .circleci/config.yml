@@ -26,23 +26,21 @@ jobs:
       - run:
           name: "Check env"
           command: |
-            if [[ -z "stage_${npm_key}" ]]; then
-               echo "environment variable npm_key is set."
+            if [[ -z "stage_${NPM_KEY}" ]]; then
+               echo "environment variable NPM_KEY is set."
             else
-              echo "environment variable npm_key is not set."
+              echo "environment variable NPM_KEY is not set."
             fi
             echo $stage
   publish:
-    working_directory: /deliverables/D3/unicef-mapbox-plugin
-    docker:
+    working_directory:    docker:
       - image: cimg/node:16.10
     steps:
       - checkout
       - run:
           name: Publish to NPM
           command: |
-            ls
-            ls ..
+            cd  ./deliverables/D3/unicef-mapbox-plugin
             npm set //registry.npmjs.org/:_authToken=${NPM_KEY}
             npm publish
 

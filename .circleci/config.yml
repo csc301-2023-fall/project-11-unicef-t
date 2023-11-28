@@ -2,12 +2,6 @@
 # See: https://circleci.com/docs/configuration-reference
 version: 2.1
 
-<<<<<<< Updated upstream
-general:
-  build_dir: deliverables/D3/unicef-mapbox-plugin
-
-=======
->>>>>>> Stashed changes
 orbs:
   node: circleci/node@5.1.0
 
@@ -21,8 +15,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Say hello"
-          command: "echo CircleCI properly configured on github!"
+        name: "Say hello"
+        command: "echo CircleCI properly configured on github!"
 
   check-env:
     docker:
@@ -30,44 +24,26 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Check env"
-          command: |
-            echo "Checking if environment variables are properly configured"
-            stage="STAGE_${NPM_KEY}"
-            if [[ -n ${!stage} ]]; then
-            echo "Environment variable NPM_KEY is set."
+        name: "Check env"
+        command: |
+            if [[ -z "STAGE_${NPM_KEY}" ]]; then
+               echo "Environment variable NPM_KEY is set."
             else
-            echo "Envirionment variable NPM_KEY is not set."
+              echo "Environment variable NPM_KEY is NOT set."
             fi
-
-            #This is the job to check that all jest tests have passed.
-#NOW REPLACED WITH ORB NODE/TEST in workflow
-  # test:
-  #   docker:
-  #     - image: cimg/node:16.10
-  #   steps:
-  #     - checkout
-  #     - node/install-packages:
-  #         pkg-manager: npm
-  #     - run:
-  #         name: "Run Tests"
-  #         command: npm test
-  #     - store_test_results:
-  #         path: test-results
-
-  #This is the job to publish to npm.
+            echo $stage
   publish:
     docker:
       - image: cimg/node:16.10
     steps:
       - checkout
       - run:
-          name: Publish to NPM
-          command: |
-            npm set //registry.npmjs.org/:_authToken=${NPM_KEY}
-            npm publish
+        name: Publish to NPM
+        command: |
+          npm set //registry.npmjs.org/:_authToken=${NPM_KEY}
+          npm publish
 
-# Orchestrate jobs using workflows
+          # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
 workflows:
   say-hello-workflow:
@@ -75,7 +51,7 @@ workflows:
       - say-hello
   test-and-publish:
     jobs:
-      - check_env
+      - check-env
       - node/test:
           app-dir: "~/project/deliverables/D3/mapbox-plugin"
           test-results-for: jest
@@ -83,5 +59,5 @@ workflows:
           app-dir: "~/project/deliverables/D3/mapbox-plugin"
           test-results-for: jest
           requires:
-            - check_env
+            - check-env
             - node/test

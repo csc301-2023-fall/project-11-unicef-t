@@ -15,8 +15,8 @@ jobs:
     steps:
       - checkout
       - run:
-        name: "Say hello"
-        command: "echo CircleCI properly configured on github!"
+          name: "Say hello"
+          command: "echo CircleCI properly configured on github!"
 
   check-env:
     docker:
@@ -24,8 +24,8 @@ jobs:
     steps:
       - checkout
       - run:
-        name: "Check env"
-        command: |
+          name: "Check env"
+          command: |
             if [[ -z "STAGE_${NPM_KEY}" ]]; then
                echo "Environment variable NPM_KEY is set."
             else
@@ -38,10 +38,10 @@ jobs:
     steps:
       - checkout
       - run:
-        name: Publish to NPM
-        command: |
-          npm set //registry.npmjs.org/:_authToken=${NPM_KEY}
-          npm publish
+          name: Publish to NPM
+          command: |
+            npm set //registry.npmjs.org/:_authToken=${NPM_KEY}
+            npm publish
 
           # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
@@ -53,11 +53,10 @@ workflows:
     jobs:
       - check-env
       - node/test:
-          app-dir: "~/project/deliverables/D3/mapbox-plugin"
+        #app-dir: "~/project/deliverables/D3/mapbox-plugin"
           test-results-for: jest
       - publish:
-          app-dir: "~/project/deliverables/D3/mapbox-plugin"
-          test-results-for: jest
+        #app-dir: "~/project/deliverables/D3/mapbox-plugin"
           requires:
             - check-env
             - node/test

@@ -1,6 +1,6 @@
 {
   "name": "unicef-mapbox-plugin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Unicef Mapbox Plugin",
   "sideEffects": false,
   "main": "lib/index.js",

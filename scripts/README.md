@@ -22,9 +22,9 @@ Plugin creation using these scripts is demonstrated over [here](https://youtu.be
 
 Stable Environment Requirements:
 
-`$ node --version         
- v16.20.2`
-
-`$ npm --version          
- 8.19.4`
-
+```
+$ node --version         
+v16.20.2
+$ npm --version          
+8.19.4
+```

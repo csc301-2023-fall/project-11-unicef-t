@@ -12,6 +12,10 @@ const config = getConfig({
   },
 });
 
+config.presets = [
+    ['@babel/preset-env', {targets: {node: 'current'}}],
+    '@babel/preset-typescript',
+]; 
 config.plugins = [
   ['babel-plugin-transform-dev', { evaluate: false }],
   ['babel-plugin-typescript-to-proptypes', { loose: true }],

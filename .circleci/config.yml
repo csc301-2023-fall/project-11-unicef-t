@@ -2,9 +2,12 @@
 # See: https://circleci.com/docs/configuration-reference
 version: 2.1
 
+<<<<<<< Updated upstream
 general:
   build_dir: deliverables/D3/unicef-mapbox-plugin
 
+=======
+>>>>>>> Stashed changes
 orbs:
   node: circleci/node@5.1.0
 
@@ -21,7 +24,23 @@ jobs:
           name: "Say hello"
           command: "echo CircleCI properly configured on github!"
 
-#This is the job to check that all jest tests have passed.
+  check-env:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run:
+          name: "Check env"
+          command: |
+            echo "Checking if environment variables are properly configured"
+            stage="STAGE_${NPM_KEY}"
+            if [[ -n ${!stage} ]]; then
+            echo "Environment variable NPM_KEY is set."
+            else
+            echo "Envirionment variable NPM_KEY is not set."
+            fi
+
+            #This is the job to check that all jest tests have passed.
 #NOW REPLACED WITH ORB NODE/TEST in workflow
   # test:
   #   docker:
@@ -45,7 +64,7 @@ jobs:
       - run:
           name: Publish to NPM
           command: |
-            npm set //registry.npmjs.org/:_authToken=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
+            npm set //registry.npmjs.org/:_authToken=${NPM_KEY}
             npm publish
 
 # Orchestrate jobs using workflows
@@ -56,8 +75,13 @@ workflows:
       - say-hello
   test-and-publish:
     jobs:
+      - check_env
       - node/test:
+          app-dir: "~/project/deliverables/D3/mapbox-plugin"
           test-results-for: jest
       - publish:
+          app-dir: "~/project/deliverables/D3/mapbox-plugin"
+          test-results-for: jest
           requires:
+            - check_env
             - node/test

@@ -24,7 +24,7 @@ Stable Environment Requirements:
 
 ```
 $ node --version         
-v16.20.2
+    v16.20.2
 $ npm --version          
-8.19.4
+    8.19.4
 ```

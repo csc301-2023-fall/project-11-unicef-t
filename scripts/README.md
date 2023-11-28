@@ -8,11 +8,11 @@ Apache Superset is a large open-source project. Building it on Docker in develop
 
 ### create-plugin.sh
 
-As the name suggests, this script helps automate the process of cloning the skeleton code of a plugin to `/tmp/<plugin name>`, making the right diretories and calling `yo` to clone superset plugin files, following their new convention for plugin development. It makes a simple yet redundant task now a single command. Refer to the script for usage.
+As the name suggests, this script helps automate the process of cloning the skeleton code of a plugin to `/tmp/<plugin name>`, making the right directories and calling `yo` to clone superset plugin files, following their new convention for plugin development. It makes a simple yet redundant task now a single command. Refer to the script for usage.
 
 ### link-plugin.sh
 
-A more complicated script, which helps automate the process of building a plugin in `/tmp/<plugin name>` assuming it's completed code. It verfies that the Superset home diretory is proper, and uses `npm` to build plugin, finally copying it to the standard plugins folder and linking it to Superset by manual string injection to `MainPreset.js` via `sed` stream editor. It makes a multi-step process to build and link into a simple command. Refer to the script for usage.
+A more complicated script, which helps automate the process of building a plugin in `/tmp/<plugin name>` assuming it's completed code. It verifies that the Superset home directory is proper, and uses `npm` to build plugin, finally copying it to the standard plugins folder and linking it to Superset by manual string injection to `MainPreset.js` via `sed` stream editor. It makes a multi-step process to build and link into a simple command. Refer to the script for usage.
 
 ### docker-control.sh
 

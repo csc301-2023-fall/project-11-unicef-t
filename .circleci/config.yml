@@ -33,6 +33,7 @@ jobs:
             fi
             echo $stage
   publish:
+    working_directory: ~/project/deliverables/D3/mapbox-plugin
     docker:
       - image: cimg/node:16.10
     steps:
@@ -53,10 +54,9 @@ workflows:
     jobs:
       - check-env
       - node/test:
-        #app-dir: "~/project/deliverables/D3/mapbox-plugin"
+          app-dir: "~/project/deliverables/D3/mapbox-plugin"
           test-results-for: jest
       - publish:
-        #app-dir: "~/project/deliverables/D3/mapbox-plugin"
           requires:
             - check-env
             - node/test

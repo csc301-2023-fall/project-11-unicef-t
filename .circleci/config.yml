@@ -33,7 +33,7 @@ jobs:
             fi
             echo $stage
   publish:
-    working_directory:    docker:
+    docker:
       - image: cimg/node:16.10
     steps:
       - checkout

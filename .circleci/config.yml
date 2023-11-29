@@ -40,7 +40,7 @@ jobs:
       - run:
           name: Publish to NPM
           command: |
-            cd  ./deliverables/D3/unicef-mapbox-plugin
+            cd  ./deliverables/D3/mapbox-plugin
             npm set //registry.npmjs.org/:_authToken=${NPM_KEY}
             npm publish
 
@@ -54,7 +54,7 @@ workflows:
     jobs:
       - check-env
       - node/test:
-          app-dir: "~/project/deliverables/D3/unicef-mapbox-plugin"
+          app-dir: "~/project/deliverables/D3/mapbox-plugin"
           test-results-for: jest
       - publish:
           requires:

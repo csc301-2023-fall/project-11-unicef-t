@@ -7,7 +7,7 @@ import os
 
 directories_and_commands = [
     {
-        "directory": r"C:\tmp\mapbox-plugin", #path to mapbox-plugin
+        "directory": r"C:\tmp\unicef-mapbox-plugin", #path to unicef-mapbox-plugin
         "commands": [
             "npm i --force",
             "npm run build"
@@ -17,11 +17,11 @@ directories_and_commands = [
     {
         "directory": r"C:\Users\justi\OneDrive\Lenovo Laptop Data 2022\Desktop\ApacheSuperset\incubator-superset\superset-frontend", #path to superset-frontend
         "commands": [
-            "npm i -S /tmp/mapbox-plugin",
+            "npm i -S /tmp/unicef-mapbox-plugin",
         ]
     },
     {
-        "directory": r"C:\tmp\mapbox-plugin\node_modules\mapbox-gl", #path to mapbox-gl folder in mapbox plugin
+        "directory": r"C:\tmp\unicef-mapbox-plugin\node_modules\mapbox-gl", #path to mapbox-gl folder in mapbox plugin
         "commands": [
             "npm install"
         ]

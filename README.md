@@ -46,9 +46,9 @@ It is fine to ignore it, but if you want to remove the warning, follow the instr
 
 Since Apache Superset is extremely tedious to set up either way, we have provided a `start_up` video under `/deliverables/D3` explaining how to launch Apache Superset using Docker after the inital Apache Superset Installation. 
 
-To use our plug-in on Apache Superset, you can download our `mapbox-plugin` folder from this repository into your local machine. You can put the `mapbox-plugin` folder anywhere in your machine **EXCEPT** in the `superset/superset-frontend/plugins` folder. Else it will cause an error and the plug-in will fail to execute. For more detailed instructions you can follow these steps:
+To use our plug-in on Apache Superset, you can download our `unicef-mapbox-plugin` folder from this repository into your local machine. You can put the `unicef-mapbox-plugin` folder anywhere in your machine **EXCEPT** in the `superset/superset-frontend/plugins` folder. Else it will cause an error and the plug-in will fail to execute. For more detailed instructions you can follow these steps:
 
-Setup: In the `mapbox-plugin` folder, run 
+Setup: In the `unicef-mapbox-plugin` folder, run 
 ```
 npm install
 ```
@@ -63,7 +63,7 @@ Then go to `node_modules\mapbox-gl` and run
 npm install
 ```
 
-To build the plugin, run the following commands:, navigate back to the 'mapbox-plugin` folder, and run the following commands:
+To build the plugin, run the following commands:, navigate back to the 'unicef-mapbox-plugin` folder, and run the following commands:
 
 ```
 npm i --force
@@ -77,9 +77,9 @@ npm run dev
 ```
 Note that one may get errors from `npm run build`, but those errors do not affect the actual building of the plugin. `npm` is a large package manager, and thus it yields irrelevant errors when trying to build the plugin. In case of version conflict errors with other tools under `npm`, it is recommended to use the `--force` flag, again due to the nature of `npm`.
 
-To add the package to Superset, go to the `superset-frontend` subdirectory in your Superset source folder (assuming both the `mapbox-plugin` plugin and `superset` repos are in the same root directory) and run
+To add the package to Superset, go to the `superset-frontend` subdirectory in your Superset source folder (assuming both the `unicef-mapbox-plugin` plugin and `superset` repos are in the same root directory) and run
 ```
-npm i -S ../../mapbox-plugin
+npm i -S ../../unicef-mapbox-plugin
 ```
 
 If your Superset plugin exists in the `superset-frontend` directory and you wish to resolve TypeScript errors about `@superset-ui/core` not being resolved correctly, add the following to your `tsconfig.json` file:
@@ -110,12 +110,12 @@ Finally, if you wish to ensure your plugin `tsconfig.json` is aligned with the r
 After this edit the `superset-frontend/src/visualizations/presets/MainPreset.js` and make the following changes:
 
 ```js
-import { MapboxPlugin } from 'mapbox-plugin';
+import { unicef-mapboxPlugin } from 'unicef-mapbox-plugin';
 ```
 
 to import the plugin and later add the following to the array that's passed to the `plugins` property:
 ```js
-new MapboxPlugin().configure({ key: 'ext-newmapbox' }),
+new unicef-mapboxPlugin().configure({ key: 'ext-newunicef-mapbox' }),
 ```
 
 After that the plugin should show up when you run Superset, e.g. the development server:
@@ -124,7 +124,7 @@ After that the plugin should show up when you run Superset, e.g. the development
 npm run dev
 ```
 
-We have also provided a video titled `plugin_demo` under `/deliverables/D3` that demonstrates how to use our plug-in using some example data. All datasets can be found in `mapbox-plugin/src/datasets`.
+We have also provided a video titled `plugin_demo` under `/deliverables/D3` that demonstrates how to use our plug-in using some example data. All datasets can be found in `unicef-mapbox-plugin/src/datasets`.
  
  ## Development requirements
 To set up for the plug-in, you would need to have the following in your system:

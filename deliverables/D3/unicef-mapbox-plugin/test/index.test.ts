@@ -26,7 +26,7 @@ import { MapboxPlugin } from '../src';
  * treated correctly (e.g. formData from plugin controls
  * properly transform the data and/or any resulting props).
  */
-describe('mapbox-plugin', () => {
+describe('unicef-mapbox-plugin', () => {
   it('exists', () => {
     expect(MapboxPlugin).toBeDefined();
   });

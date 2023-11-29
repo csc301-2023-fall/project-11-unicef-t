@@ -26,12 +26,11 @@ jobs:
       - run:
           name: "Check env"
           command: |
-            if [[ -z "stage_${NPM_KEY}" ]]; then
+            if [[ -z "${NPM_KEY}" ]]; then
                echo "environment variable NPM_KEY is set."
             else
               echo "environment variable NPM_KEY is not set."
             fi
-            echo $stage
   publish:
     docker:
       - image: cimg/node:16.10

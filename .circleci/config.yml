@@ -2,9 +2,6 @@
 # See: https://circleci.com/docs/configuration-reference
 version: 2.1
 
-general:
-  build_dir: deliverables/D3
-
 orbs:
   node: circleci/node@5.1.0
 
@@ -19,24 +16,22 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "echo CircleCI properly configured."
+          command: "echo CircleCI properly configured on github!"
 
-#This is the job to check that all jest tests have passed.
-#NOW REPLACED WITH ORB NODE/TEST in workflow
-  # test:
-  #   docker:
-  #     - image: cimg/node:16.10
-  #   steps:
-  #     - checkout
-  #     - node/install-packages:
-  #         pkg-manager: npm
-  #     - run:
-  #         name: "Run Tests"
-  #         command: npm test
-  #     - store_test_results:
-  #         path: test-results
-
-  #This is the job to publish to npm.
+  check-env:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run:
+          name: "Check env"
+          command: |
+            if [[ -z "stage_${NPM_KEY}" ]]; then
+               echo "environment variable NPM_KEY is set."
+            else
+              echo "environment variable NPM_KEY is not set."
+            fi
+            echo $stage
   publish:
     docker:
       - image: cimg/node:16.10
@@ -45,10 +40,11 @@ jobs:
       - run:
           name: Publish to NPM
           command: |
-            npm set //registry.npmjs.org/:_authToken=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
+            cd  ./deliverables/D3/unicef-mapbox-plugin
+            npm set //registry.npmjs.org/:_authToken=${NPM_KEY}
             npm publish
 
-# Orchestrate jobs using workflows
+          # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
 workflows:
   say-hello-workflow:
@@ -56,8 +52,11 @@ workflows:
       - say-hello
   test-and-publish:
     jobs:
+      - check-env
       - node/test:
+          app-dir: "~/project/deliverables/D3/unicef-mapbox-plugin"
           test-results-for: jest
       - publish:
           requires:
+            - check-env
             - node/test

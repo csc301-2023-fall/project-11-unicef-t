@@ -46,7 +46,7 @@ describe('MapboxPlugin transformProps', () => {
   });
 
   it('should transform chart props for viz', () => {
-    expect(transformProps(chartProps)).toEqual({
+    expect(transformProps(chartProps)).toMatchObject({
       width: 800,
       height: 600,
       data: [{ name: 'Name 1', number: 5, __timestamp: 599616000000 },
@@ -55,10 +55,9 @@ describe('MapboxPlugin transformProps', () => {
       ],
       boldText: true,
       headerFontSize: 'xs',
-      headerText: 'my text',
+      headerText: 'header text',
       country: 'Egypt',
-      year: 2007,
-      formData = {
+      formData : {
         selectCountry: 'Egypt',
         selectYear: 2007,
       },

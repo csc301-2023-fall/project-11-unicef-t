@@ -23,14 +23,16 @@ do
     esac
 done
 
-name='superset-plugin-chart';
+name='';
 
 for word in "$@" 
 do
     name="$name-$word";
 done
 
-if [ $name == 'superset-plugin-chart' ]
+name="${name:1}";
+
+if [ $name == '' ]
 then
     echo "Plugin name not specified. Exiting..";
     exit 1;

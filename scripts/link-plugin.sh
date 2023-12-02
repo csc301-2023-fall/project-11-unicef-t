@@ -38,18 +38,18 @@ then
     exit 1;
 fi
 
-name='superset-plugin-chart';
-pname='';
+name='';
 
 for word in "$@" 
 do
     name="$name-$word";
-    pname="$pname-$word";
 done
+
+name="${name:1}";
 
 src="/tmp/$name";
 
-if [ $name == 'superset-plugin-chart' ] || [ ! -d $src ]
+if [ $name == '' ] || [ ! -d $src ]
 then
     echo "Plugin not found / specified. Exiting..";
     exit 1;
@@ -95,7 +95,7 @@ then
     echo "Linking in MainPreset.js ...";
 fi
 
-capitalized_name='SupersetPluginChart';
+capitalized_name='';
 
 for word in "$@" 
 do
@@ -104,7 +104,7 @@ done
 
 file_path="$SUPERSET_HOME/superset-frontend/src/visualizations/presets/MainPreset.js";
 import_statement="import { $capitalized_name } from './../../../plugins/$name';";
-init_statement="\tnew $capitalized_name().configure({ key: 'ext$pname' }),";
+init_statement="\tnew $capitalized_name().configure({ key: 'ext-$name' }),";
 
 sed -i "/plugins: \[/a \ $init_statement" $file_path;
 

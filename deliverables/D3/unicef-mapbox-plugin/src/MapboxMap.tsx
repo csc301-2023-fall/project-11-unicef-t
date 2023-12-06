@@ -26,7 +26,6 @@
 //         colorScheme,
 //         sliceId,
 //       } = this.props;
-//       console.log('mount props', this.props);
 
 //       mapboxgl.accessToken = 'pk.eyJ1IjoibmJhbGVldGEiLCJhIjoiY2xqY3AzNzJrMmpjbDNrcXp0dG5yMGMyOSJ9.55GXHudxYu9ASXD4XC3USg'
 //       const map = new mapboxgl.Map({
@@ -90,7 +89,6 @@
 //     }
   
 //     render() {
-//       console.log('render props', this.props);
 //       return (
 //         <div>
 //           <div id="map" style={{ position: 'absolute', top: 0, bottom: 0, width: '100%' }} />

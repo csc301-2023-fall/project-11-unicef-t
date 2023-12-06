@@ -35,7 +35,6 @@ import { countryOptions } from './countries';
 
 
 function filterNumericColumns(columns) {
-  console.log("??? filter is ", columns.filter(column => column.type=="NUMBER"));
   return columns.filter(column => column.type=="NUMBER");
 }
 
@@ -98,7 +97,6 @@ const config: ControlPanelConfig = {
       label: t('Metric Year'),
       mapStateToProps: state => {
         const { datasource } = state;
-        console.log('!!! controlpanel metric year datasource', datasource);
         return {
           columns: datasource ? datasource.columns : [],
           savedMetrics: datasource ? datasource.metrics : [],
@@ -112,7 +110,6 @@ const config: ControlPanelConfig = {
       label: t('Metric ISO Codes'),
       mapStateToProps: state => {
         const { datasource } = state;
-        console.log('!!! controlpanel secondary metric datasource', datasource);
         return {
           columns: datasource ? datasource.columns : [],
           savedMetrics: datasource ? datasource.metrics : [],

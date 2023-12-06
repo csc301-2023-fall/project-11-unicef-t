@@ -39,8 +39,6 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibmJhbGVldGEiLCJhIjoiY2xqY3AzNzJrMmpjbDNrcXp0d
 const MapboxPlugin = (props: MapboxPluginProps) => {
   const { data, height, width, country, formData } = props;
 
-  console.log('props are:', props);
-  console.log('data is ', data);
   var NEW_DATA = {};
   
   //PARSE data
@@ -49,17 +47,13 @@ const MapboxPlugin = (props: MapboxPluginProps) => {
     const iso_values = all_values[0];
     NEW_DATA[all_values[1]] = iso_values;
   }
-  console.log('new_data is ', NEW_DATA);
   
   //This code changes dataset values relatively so that the map create a better display
   const cleanedData = NEW_DATA;
   const min_value = Math.min(...Object.values(cleanedData));
   const rounded_min_value = Math.pow(10, Math.floor(Math.log10(min_value)));
   const factor = 100000 / rounded_min_value;
-  console.log('factor ', factor);
   
-  console.log('cleanedData is ', cleanedData);
-
   // //Clean dataset. connection issues may cause NAN values. Add this code if you have connection problems.
 
   // const cleanedData = Object.keys(cleanedData).reduce((result, key) => {
@@ -69,11 +63,7 @@ const MapboxPlugin = (props: MapboxPluginProps) => {
   //   return result;
   // }, {});
 
-
-  console.log('country is', country);
-  const jsonFile = countries[country];
-  console.log('jsonFile', jsonFile);
-  
+  const jsonFile = countries[country];  
 
   const rootElem = createRef<HTMLDivElement>();
 
@@ -81,7 +71,6 @@ const MapboxPlugin = (props: MapboxPluginProps) => {
   // Here, you can do that with createRef, and the useEffect hook.
   useEffect(() => {
     const root = rootElem.current as HTMLElement;
-    console.log('Plugin element', root);
       
     const map = new mapboxgl.Map({
       container: 'map', // container ID
@@ -92,7 +81,6 @@ const MapboxPlugin = (props: MapboxPluginProps) => {
     map.on('load', async() => {
       const response = await fetch(jsonFile);
       const geodata = await response.json();
-      console.log("GeoJson Data is ", geodata);
       const length = geodata.features[0].geometry.coordinates[0].length;
       const first_coord = geodata.features[0].geometry.coordinates[0][0];
       const last_coord = geodata.features[0].geometry.coordinates[0][length-1];
@@ -106,8 +94,6 @@ const MapboxPlugin = (props: MapboxPluginProps) => {
           const population_value = cleanedData[ISO_code];
           mapdata.features[i].properties.population = population_value*factor;
       }
-      console.log("Mapdata is ", mapdata)
-
 
       map.addSource('rwanda-provinces', {
         'type': 'geojson',

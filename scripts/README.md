@@ -28,3 +28,33 @@ v16.20.2
 $ npm --version
 8.19.4
 ```
+
+## Helper Scripts
+
+In addition to helping with the set-ups and building plug-ins, we also created a helper script that would aid the user for writing datasets. This is because our Mapbox plug-in requires an `ISO-code` attribute to differentiate between the states/provinces. The helper script is described below:
+
+### geojson_file_parser.py
+
+This is a python script to help extract information from the GeoJSON files and write the extracted information into a data file (mainly in `.csv` format). To use the script, you must put the script into the SAME directory as your GeoJSON files. In other words, the python script and the GeoJSON files should be in the same folder.
+
+To use the script, make sure that you have Python installed on your computer. If you don't have it, you can download it [HERE](https://www.python.org/downloads/).
+
+Once you checked that you have python installed, navigate to the folder that contains both the GeoJSON files and the python script.
+
+For example, if I am on Windows, and I have the file in a folder named `example` on my Desktop, I would open up Windows Powershell and type the following command:
+
+```
+cd Users/your_username_here/Desktop/example
+```
+
+Next, type in the following command:
+
+```
+python3 geojson_file_parser.py
+```
+
+The script will prompt you to enter a country that you want to extract information from. Your inputs also must all be in lower case, but white spaces are allowed (i.e. costa rica).
+
+After you put in a country name, the script will outout "Data has been successfully written to file" on success, and there will be a new `.csv` file with a suffix of `_info.csv` in your folder (i.e. `costa rica_info.csv`).
+
+If the script does not succeed, it returns an `ExtractionError`, which means that either the country's corresponding GeoJSON file doesn't exist, or the GeoJSON file does not have a `FeatureCollection` attribute. 

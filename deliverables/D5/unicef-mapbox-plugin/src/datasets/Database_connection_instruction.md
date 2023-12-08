@@ -1,7 +1,7 @@
 This is the instruction for connection Apache Superset to external database.
 
 
-1. Visit the Aiven cloud website at https://aiven.io/.
+1. Visit the Aiven cloud website at https://aiven.io/. (Or any database service, we will use Aiven cloud as an example)
 
 2. If you don't have an account, create one.
 

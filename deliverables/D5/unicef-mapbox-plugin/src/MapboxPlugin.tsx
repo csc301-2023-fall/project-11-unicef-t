@@ -102,7 +102,7 @@ const MapboxPlugin = (props: MapboxPluginProps) => {
 
       var mapdata = geodata;
 
-
+      // Using the parsed data to update the map features accordingly
       for (let i=0; i<mapdata.features.length; i++){
           const ISO_code = mapdata.features[i].properties.ISO;
           const population_value = cleanedData[ISO_code];

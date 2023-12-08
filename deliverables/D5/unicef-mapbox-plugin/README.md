@@ -64,3 +64,5 @@ After that the plugin should show up when you run Superset, e.g. the development
 ```
 npm run dev-server
 ```
+
+Here is a video showing what you can do with the plugin once you have it running: https://www.youtube.com/watch?v=L-OZWItipP8&ab_channel=WillJarvis-Cross

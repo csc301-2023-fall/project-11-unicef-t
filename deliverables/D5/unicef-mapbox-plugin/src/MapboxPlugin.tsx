@@ -59,7 +59,7 @@ const MapboxPlugin = (props: MapboxPluginProps) => {
   const factor = 100000 / rounded_min_value;
 
 
-  // //Clean dataset. connection issues may cause NAN values. Add this code if you have connection problems.
+  // Clean dataset. connection issues may cause NAN values. Uncomment this code if you have connection problems.
 
   // const cleanedData = Object.keys(cleanedData).reduce((result, key) => {
   //   if (!isNaN(NEW_DATA[key])) {
@@ -82,6 +82,7 @@ const MapboxPlugin = (props: MapboxPluginProps) => {
     const root = rootElem.current as HTMLElement;
 
       
+    // create a new map instance
     const map = new mapboxgl.Map({
       container: 'map', // container ID
       style: 'mapbox://styles/mapbox/streets-v12', //  center: firstCoordinate, starting position [lng, lat]  [30.0222, -1.9596]
@@ -137,7 +138,7 @@ const MapboxPlugin = (props: MapboxPluginProps) => {
         ['linear'],
         ['var', 'density'],
         274,
-        ['to-color', '#f5e5f3'],
+        ['to-color', '#f5e5f3'], //Change the hex color code if you want to display a different color
         1551,
         ['to-color', '#8d00ac']
         ],

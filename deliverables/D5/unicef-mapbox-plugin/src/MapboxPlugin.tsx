@@ -22,7 +22,7 @@ import { reactify,  } from '@superset-ui/core';
 import { MapboxPluginProps, MapboxPluginStylesProps } from './types';
 import countries, { countryOptions } from './countries';
 import mapboxgl from 'mapbox-gl';
-import d3 from 'd3';
+
 
 /**
  * ******************* WHAT YOU CAN BUILD HERE *******************
@@ -32,12 +32,15 @@ import d3 from 'd3';
  *  * FormData (your controls!) provided as props by transformProps.ts
  */
 
+//Placeholder Access Token. Replace with yours here.
+mapboxgl.accessToken = '';
 
-mapboxgl.accessToken = 'pk.eyJ1IjoibmJhbGVldGEiLCJhIjoiY2xqY3AzNzJrMmpjbDNrcXp0dG5yMGMyOSJ9.55GXHudxYu9ASXD4XC3USg';
 
 
+//Creates a Mapbox Instance
 const MapboxPlugin = (props: MapboxPluginProps) => {
   const { data, height, width, country, formData } = props;
+
 
   var NEW_DATA = {};
   
@@ -47,12 +50,14 @@ const MapboxPlugin = (props: MapboxPluginProps) => {
     const iso_values = all_values[0];
     NEW_DATA[all_values[1]] = iso_values;
   }
+
   
   //This code changes dataset values relatively so that the map create a better display
   const cleanedData = NEW_DATA;
   const min_value = Math.min(...Object.values(cleanedData));
   const rounded_min_value = Math.pow(10, Math.floor(Math.log10(min_value)));
   const factor = 100000 / rounded_min_value;
+
 
   // //Clean dataset. connection issues may cause NAN values. Add this code if you have connection problems.
 
@@ -63,7 +68,11 @@ const MapboxPlugin = (props: MapboxPluginProps) => {
   //   return result;
   // }, {});
 
-  const jsonFile = countries[country];  
+
+
+  const jsonFile = countries[country];
+
+  
 
   const rootElem = createRef<HTMLDivElement>();
 
@@ -71,6 +80,7 @@ const MapboxPlugin = (props: MapboxPluginProps) => {
   // Here, you can do that with createRef, and the useEffect hook.
   useEffect(() => {
     const root = rootElem.current as HTMLElement;
+
       
     const map = new mapboxgl.Map({
       container: 'map', // container ID
@@ -81,6 +91,9 @@ const MapboxPlugin = (props: MapboxPluginProps) => {
     map.on('load', async() => {
       const response = await fetch(jsonFile);
       const geodata = await response.json();
+
+      //Get "roughly" the centre of the country so that the map loads there
+
       const length = geodata.features[0].geometry.coordinates[0].length;
       const first_coord = geodata.features[0].geometry.coordinates[0][0];
       const last_coord = geodata.features[0].geometry.coordinates[0][length-1];
@@ -94,6 +107,7 @@ const MapboxPlugin = (props: MapboxPluginProps) => {
           const population_value = cleanedData[ISO_code];
           mapdata.features[i].properties.population = population_value*factor;
       }
+
 
       map.addSource('rwanda-provinces', {
         'type': 'geojson',

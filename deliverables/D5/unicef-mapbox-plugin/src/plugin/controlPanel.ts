@@ -33,7 +33,11 @@ import {
 } from '@superset-ui/chart-controls';
 import { countryOptions } from './countries';
 
-
+/**
+ * 
+ * @param columns 
+ * @returns all columns which have type "NUMBER"
+ */
 function filterNumericColumns(columns) {
   return columns.filter(column => column.type=="NUMBER");
 }
@@ -55,7 +59,16 @@ const columnsConfig = isFeatureEnabled(FeatureFlag.ENABLE_EXPLORE_DRAG_AND_DROP)
   ? sharedControls.entity
   : allColumns;
 
-
+/**
+ * This section configures the control panel that is shown to the left of the map visualization.
+ * Each of the entries in controlSetRows defines a query option that can be used to configure the 
+ * mapping visualization. 
+ * The current fields include:
+ *  - select_country
+ *  - select_year
+ *  - metric year
+ *  - metric ISO codes
+ */
 const config: ControlPanelConfig = {
   controlPanelSections: [
     sections.legacyRegularTime,
@@ -72,7 +85,7 @@ const config: ControlPanelConfig = {
               default: null,
               choices: countryOptions,
               description: t('Which country to plot the map for?'),
-              validators: [validateNonEmpty],
+              validators: [validateNonEmpty], 
             },
           },
         ],
@@ -92,7 +105,8 @@ const config: ControlPanelConfig = {
       ],
     },
   ],
-  controlOverrides: {
+  // These control overrides allow the plugin to use the entered metrics in the visualization
+  controlOverrides: { 
     metric: {
       label: t('Metric Year'),
       mapStateToProps: state => {

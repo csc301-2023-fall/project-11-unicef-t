@@ -88,6 +88,7 @@ const MapboxPlugin = (props: MapboxPluginProps) => {
       zoom: 7 // starting zoom
     });
       
+    // Loading in default data (population density in rwanda)
     map.on('load', async() => {
       const response = await fetch(jsonFile);
       const geodata = await response.json();
@@ -161,6 +162,7 @@ const MapboxPlugin = (props: MapboxPluginProps) => {
   });
 
 
+  // Returning jsx with id "map", refering to the mapboxgl.Map instance above
   return (
     <div
     id="map"

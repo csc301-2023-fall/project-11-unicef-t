@@ -29,6 +29,10 @@ $ npm --version
 8.19.4
 ```
 
+### super-docker.sh
+
+This script automates the entire process of running Apache Superset on Docker in Linux. It downloads stable node and npm versions, and then links them in the system before running superset. The stable version is completely flexible and can be changed from inside the script. Infact, it can be used to run superset in different versions of node and npm by changing the same line before running (possible via `sd` command). It is a helpful script to completely automate running superset and quickly getting into development.
+
 ## Helper Scripts
 
 In addition to helping with the set-ups and building plug-ins, we also created a helper script that would aid the user for writing datasets. This is because our Mapbox plug-in requires an `ISO-code` attribute to differentiate between the states/provinces. The helper script is described below:

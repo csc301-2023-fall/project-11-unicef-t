@@ -32,7 +32,6 @@ shf=0;
 
 # undoing critical changes by trapping ctrl-C
 killed() {
-    
     if [ -f $node_tar ]
     then
         rm -f $node_tar;

@@ -45,22 +45,24 @@ function filterNumericColumns(columns) {
 
 
 // choices: columnChoices(state.datasource)
-
+// Define a configuration for all columns of types INTEGER, FLOAT, or DOUBLE. Add more numeric types if needed
 const allColumns = {
   type: 'SelectControl',
   default: null,
   mapStateToProps: (state: ControlPanelState) => ({
     choices: columnChoices(state.datasource).filter(column => {
-       return column.type === 'INTEGER' || column.type === 'FLOAT' || column.type === 'DOUBLE'; // Add more numeric types if needed
+       return column.type === 'INTEGER' || column.type === 'FLOAT' || column.type === 'DOUBLE';
     }),
   }),
 };
+
+// Use entity controls or all columns configuration based on a feature flag
 const columnsConfig = isFeatureEnabled(FeatureFlag.ENABLE_EXPLORE_DRAG_AND_DROP)
   ? sharedControls.entity
   : allColumns;
 
 /**
- * This section configures the control panel that is shown to the left of the map visualization.
+ * This section configures the control panel that is shown to the left of the map visualization. 
  * Each of the entries in controlSetRows defines a query option that can be used to configure the 
  * mapping visualization. 
  * The current fields include:
@@ -137,6 +139,7 @@ const config: ControlPanelConfig = {
 
   },
 
+  //Form data overrides to modify form data before submitting
   formDataOverrides: formData => ({
     ...formData,
     metric: getStandardizedControls().shiftMetric(),

@@ -13,13 +13,16 @@ Currently, the problem about Apache Superset is that the existing plug-in is tha
 
 The application is a plug-in for Superset that helps with data navigation, manipulation, and visualization. The aim of this application is to expand on the visualizations and provide a clearer view of any demographic data, enhance the distinction between countries and their boundaries, and offer more options to analyze the data. We decided to use mapbox-gl as the map visualization of our choice, as it is able to clearly display our selected country as well as the geographic borders of surrounding countries and areas. 
 ​
-## Key Features
+## Key Features of our Implemented Plugin
 
  * Users will get different dimensions on the map. Specifically, they will get map visualizations beyond a chloropath.
  * Users will be able to propose population estimates for a selected region, and others can review the said proposal.
  * Users will be able to view heatmap of whatever dataset for the regions of selected country.
+ * Users will be able to integrate real-time data or satellite imagery into our plugin
+ * Able to visualize surrounding geographical boundaries
+ * Follows Apache Superset's new approach for plugins (Javascript, React.js)
 ​
-## Instructions
+## Instructions/Setup
 
 To use our plug-in, you need to download and set up Apache Superset on your computer.
 

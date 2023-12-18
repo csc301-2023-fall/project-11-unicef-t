@@ -19,6 +19,7 @@ jobs:
           command: "echo CircleCI properly configured on github!"
 
   check-env:
+    resource_class: medium+
     docker:
       - image: cimg/base:stable
     steps:
